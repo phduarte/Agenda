@@ -1,0 +1,59 @@
+﻿@section Styles {
+    <style type="text/css">
+        table {
+            font-family: Arial;
+            font-size: 12px;
+        }
+
+            table * {
+                border: 1px solid #507CD1;
+                text-align: center;
+            }
+    </style>
+}
+<form id="form1" runat="server">
+    <div>
+        <asp:GridView ID="Tabela" AutoGenerateColumns="False" runat="server" ForeColor="#333333" GridLines="None" CellPadding="4">
+            <AlternatingRowStyle BackColor="White" />
+            <Columns>
+                <asp:BoundField HeaderText="ID" DataField="id_agendamento">
+                    <ItemStyle Width="50" />
+                </asp:BoundField>
+                <asp:BoundField HeaderText="Tarefa" DataField="tarefa">
+                    <ItemStyle Width="300" />
+                </asp:BoundField>
+                <asp:BoundField HeaderText="Cliente" DataField="cliente">
+                    <ItemStyle Width="100" />
+                </asp:BoundField>
+                <asp:BoundField HeaderText="Responsável" DataField="responsavel">
+                    <ItemStyle Width="150" />
+                </asp:BoundField>
+                <asp:BoundField HeaderText="Duração" DataField="duracao_tempo" DataFormatString="{0:HH:mm:ss}">
+                    <ItemStyle Width="50" />
+                </asp:BoundField>
+                <asp:BoundField HeaderText="Prazo" DataField="prazo" DataFormatString="{0:dd/MM/yyyy HH:mm:ss}">
+                    <ItemStyle Width="80" />
+                </asp:BoundField>
+                <asp:BoundField HeaderText="Envio" DataField="envio" DataFormatString="{0:dd/MM/yyyy HH:mm:ss}">
+                    <ItemStyle Width="80" />
+                </asp:BoundField>
+                <asp:ImageField HeaderText="Farol" DataImageUrlField="farol" ControlStyle-Width="18" ControlStyle-BorderColor="Transparent">
+                    <ItemStyle Width="30" />
+                </asp:ImageField>
+                <asp:BoundField HeaderText="Observações" DataField="obs">
+                    <ItemStyle Width="200" />
+                </asp:BoundField>
+            </Columns>
+            <EditRowStyle BackColor="#2461BF" />
+            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#EFF3FB" />
+            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#F5F7FB" />
+            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+            <SortedDescendingCellStyle BackColor="#E9EBEF" />
+            <SortedDescendingHeaderStyle BackColor="#4870BE" />
+        </asp:GridView>
+    </div>
+</form>

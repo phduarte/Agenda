@@ -1,0 +1,112 @@
+﻿@section Styles {
+    <style type="text/css">
+        #box-agenda {
+            margin: 0 auto;
+            width: 900px;
+        }
+
+        #box-tabela {
+            background-color: #FFF;
+        }
+
+        .bloco {
+            height: 50px;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script type="text/javascript">
+        $(function () {
+            $(".data").datepicker();
+            $(".data").mask("99/99/9999");
+        });
+        $(window).ready(function () { ContentResize(); });
+        $(window).resize(function () { ContentResize(); });
+
+        //
+        function OpenReports(url) {
+            window.open(url, "janela", "width=600,height=400,resizable=yes,scrollbars=yes");
+        }
+    </script>
+}
+
+<form id="Form1" runat="server">
+    <div id="box-agenda">
+        <div id="box-filtro">
+            <fieldset class="bloco">
+                <legend>Período</legend>
+                <table>
+                    <tr>
+                        <td><label>De</label></td>
+                        <td>
+                            <asp:TextBox ID="txtinicio" CssClass="data" runat="server" AutoPostBack="true"></asp:TextBox>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset class="bloco">
+                <legend>Atribuição</legend>
+                <table>
+                    <tr>
+                        <td><label>Grupo</label></td>
+                        <td>
+                            <asp:DropDownList ID="Grupo" runat="server" AutoPostBack="True"
+                                              ViewStateMode="Enabled">
+                            </asp:DropDownList>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+        <div id="box-tabela">
+            <asp:Chart ID="Chart1" runat="server" Width="800px">
+                <Titles>
+                    <asp:Title ToolTip="Ocupação por Funcionário"
+                               Text="Ocupação por Funcionário" />
+                </Titles>
+                <legends>
+                    <asp:Legend Alignment="Center"
+                                Enabled="false"
+                                Docking="Bottom"
+                                IsTextAutoFit="False"
+                                Name="Default"
+                                LegendStyle="Row" />
+                </legends>
+                <Series>
+                    <asp:Series BackGradientStyle="LeftRight"
+                                BorderDashStyle="Solid"
+                                BorderColor="LightGray"
+                                BackSecondaryColor="LightGray"
+                                Name="Demanda"
+                                IsValueShownAsLabel="true"
+                                LabelFormat="{0:HH:mm:ss}"
+                                ChartType="StackedBar"
+                                Color="White"
+                                ToolTip="Demanda" CustomProperties="BarLabelStyle=Right" />
+                    <asp:Series Name="Entregue"
+                                BorderDashStyle="Solid"
+                                BorderColor="LightGray"
+                                IsValueShownAsLabel="true"
+                                LabelFormat="{0:HH:mm:ss}"
+                                ChartType="Bar"
+                                Color="0, 255, 0"
+                                ToolTip="Entrega"
+                                CustomProperties="BarLabelStyle=Left" />
+                </Series>
+                <ChartAreas>
+                    <asp:ChartArea Name="ChartArea1">
+                        <AxisX LineColor="Red" Interval="1" Minimum="0" TextOrientation="Horizontal">
+                            <MajorGrid LineColor="LightGray" />
+                            <LabelStyle ForeColor="Gray" />
+                        </AxisX>
+                        <AxisY LineColor="LightGray" Interval="1" Minimum="0" TextOrientation="Horizontal">
+                            <MajorGrid LineColor="LightGray" />
+                            <LabelStyle Enabled="false" />
+                        </AxisY>
+                    </asp:ChartArea>
+                </ChartAreas>
+            </asp:Chart>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,136 @@
+﻿#box-login {
+    width: 948px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #FFF;
+}
+
+    #box-login .logo {
+        position: relative;
+        width: 320px;
+        height: 132px;
+        top: 82px;
+        left: 30px;
+        margin: auto;
+    }
+
+    #box-login .caracteristicas {
+        position: relative;
+        top: 10px;
+        margin-right: 20px;
+    }
+
+        #box-login .caracteristicas ul {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+        }
+
+        #box-login .caracteristicas li {
+            list-style-image: url(img/controls/arrow.gif);
+            float: right;
+            clear: right;
+            color: #999;
+            line-height: 20px;
+        }
+
+    #box-login .box_login {
+        float: left;
+        width: 379px;
+        height: 320px;
+        margin: 40px;
+    }
+
+#content {
+    background-color: #FFF;
+}
+
+#box-login {
+    width: 948px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+    #box-login .box_login {
+        float: left;
+        width: 379px;
+        height: 320px;
+        margin: 40px;
+    }
+
+    #box-login .top {
+        background-color: #FEFEFE;
+        height: 85px;
+        margin-bottom: 0px;
+        line-height: 85px;
+        text-indent: 30px;
+        color: #CCC;
+    }
+
+    #box-login .center {
+        background-color: #FFFFFF;
+        height: 150px;
+        margin-bottom: 0px;
+        color: #999;
+    }
+
+        #box-login .center label {
+            float: right;
+        }
+
+        #box-login .center table {
+            width: 100%;
+        }
+
+            #box-login .center table td {
+                border: 1px solid #FFF;
+                padding: 8px;
+            }
+
+        #box-login .center table {
+            width: 100%;
+        }
+
+    #box-login .bottom {
+        background-color: #F8F8F8;
+        height: 85px;
+        margin-bottom: 0px;
+        color: #CCC;
+        line-height: 27px;
+        text-indent: 20px;
+    }
+
+        #box-login .bottom * {
+            padding: 10px;
+        }
+
+    #box-login .botao {
+        margin: 5px;
+    }
+
+    #box-login .logo {
+        position: relative;
+        width: 320px;
+        height: 132px;
+        top: 82px;
+        left: 30px;
+        margin: auto;
+    }
+
+    #box-login .caracteristicas {
+        position: relative;
+        top: 10px;
+        margin-right: 20px;
+    }
+
+        #box-login .caracteristicas ul {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+        }
+
+        #box-login .caracteristicas li {
+            list-style-image: url('../img/controls/arrow.gif');
+            float: right;
+            clear: right;
+            color: #999;
+            line-height: 20px;
+        }

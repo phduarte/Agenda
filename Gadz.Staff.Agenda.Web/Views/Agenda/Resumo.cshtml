@@ -1,0 +1,105 @@
+﻿
+<form runat="server">
+    <div id="box-agenda">
+        <fieldset>
+            <legend>Tarefa</legend>
+            <table class="tab1">
+                <tr>
+                    <td colspan="3">
+                        <h3><asp:Literal ID="IdTarefa" runat="server"></asp:Literal> - <asp:Literal ID="Tarefa" runat="server"></asp:Literal></h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Cliente</label></td>
+                    <td><asp:Literal ID="Cliente" runat="server"></asp:Literal></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label>SLA</label></td>
+                    <td><asp:Literal ID="SLA" runat="server"></asp:Literal></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label>Responsável</label></td>
+                    <td><asp:Literal ID="Responsavel" runat="server"></asp:Literal></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label>Categoria</label></td>
+                    <td><asp:Literal ID="Categoria" runat="server"></asp:Literal></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label>Duração</label></td>
+                    <td><asp:Literal ID="Duracao" runat="server"></asp:Literal></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label>Data da Solicitação</label></td>
+                    <td><asp:Literal ID="DataSolicitacao" runat="server"></asp:Literal></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label>Motivo da tarefa</label></td>
+                    <td colspan="2"><asp:Literal ID="MotivoTarefa" runat="server"></asp:Literal></td>
+                </tr>
+                <tr>
+                    <td><label>Motivo deste agendamento</label></td>
+                    <td colspan="2"><asp:Literal ID="MotivoAgendamento" runat="server"></asp:Literal></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Últimos Envios</legend>
+            <asp:BulletedList ID="UltimosEnvios" runat="server">
+            </asp:BulletedList>
+        </fieldset>
+
+        <fieldset>
+            <legend>Próximos Envios</legend>
+            <asp:BulletedList ID="ProximosEnvios" runat="server">
+            </asp:BulletedList>
+        </fieldset>
+
+        <fieldset>
+            <legend>Histórico de Tratamento</legend>
+            <asp:BulletedList ID="HistoricoTratamentos" runat="server">
+            </asp:BulletedList>
+        </fieldset>
+
+    </div>
+</form>
+@section Styles {
+    <style type="text/css">
+        #box-agenda {
+            width: 900px;
+        }
+
+            #box-agenda label {
+                width: 200px;
+                color: #00C;
+            }
+
+            #box-agenda fieldset {
+                margin: 5px;
+            }
+
+                #box-agenda fieldset li {
+                    list-style: none;
+                    text-indent: 20px;
+                    margin: 5px;
+                }
+
+                #box-agenda fieldset legend {
+                    text-indent: 10px;
+                }
+
+            #box-agenda table {
+                margin: 5px;
+            }
+
+        .tab1 {
+            padding: 5px;
+        }
+    </style>
+}

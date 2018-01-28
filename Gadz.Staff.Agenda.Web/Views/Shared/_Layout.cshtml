@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Agenda - @ViewBag.Title</title>
+    <link href="~/css/reset.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/header.css" rel="stylesheet" />
+    <link href="~/css/footer.css" rel="stylesheet" />
+    <link href="~/css/statusbar.css" rel="stylesheet" />
+    <link href="~/lib/jquery-ui-1.10.0.custom/css/smoothness/jquery-ui-1.10.0.custom.css" rel="stylesheet" type="text/css"/>
+    <link type="text/css" href="~/lib/ShadownBox/Shadowbox.css" rel="stylesheet" />
+    <style type="text/css">
+        #sb-info {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    </style>
+    @RenderSection("Styles", false)
+</head>
+<body>
+    @Html.Partial("_Header")
+    @Html.Partial("_Statusbar")
+    <main id="content">
+        @RenderBody()
+    </main>
+    @Html.Partial("_Footer")
+    <script type="text/javascript" src="~/js/script.js"></script>
+    <script type="text/javascript" src="~/lib/jquery/jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="~/lib/jquery-ui-1.10.0.custom/js/jquery-ui-1.10.0.custom.min.js"></script>
+    <script type="text/javascript" src="~/lib/jquery.maskedinput/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript" src="~/lib/ShadownBox/Shadowbox.js"></script>
+    <script type="text/javascript">
+        $(window).ready(function () { ContentResize(); CenterInContent(); });
+        $(window).resize(function () { ContentResize(); CenterInContent(); });
+    </script>
+    @RenderSection("Scripts", false)
+</body>
+</html>

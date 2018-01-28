@@ -1,0 +1,89 @@
+﻿@section Styles{
+<style type="text/css">
+    #box-formulario {
+        width: 470px;
+    }
+
+    .style1 {
+        width: 400px;
+    }
+
+    .style2 {
+        width: 100px;
+    }
+
+    .style4 {
+        width: 238px;
+    }
+</style>
+}
+@section Scripts{
+    <script type="text/javascript">
+        $(function () {
+            $(".data").datepicker();
+            $(".data").mask("99/99/9999");
+        });
+    </script>
+}
+
+    <div id="box-formulario" class="box-center">
+        <form id="form1" runat="server">
+            <div id="top">
+                <h5># Tarefa</h5>
+                <a href="Pesquisar.aspx" class="fechar"></a>
+            </div><!-- top -->
+            <div id="center">
+                <table>
+                    <tr>
+                        <td class="style2"><label class="rotulo">Tarefa</label></td>
+                        <td class="style1">
+                            <asp:TextBox ID="Tarefa" runat="server" BackColor="#FFFFCC"
+                                         Width="270px" ViewStateMode="Enabled" MaxLength="50"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server"
+                                                        ControlToValidate="Tarefa" ErrorMessage="Obrigatório"></asp:RequiredFieldValidator>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style2"><label class="rotulo">Data Solicitação</label></td>
+                        <td class="style1">
+                            <asp:TextBox id="DataSolicitacao" CssClass="data" runat="server"
+                                         ClientIDMode="Static" BackColor="#FFFFCC"
+                                         ViewStateMode="Enabled" Width="100px"></asp:TextBox>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
+                                                            ErrorMessage="Formato inválido!" Height="16px"
+                                                            ControlToValidate="DataSolicitacao"
+                                                            ValidationExpression="\d{1,2}\/\d{1,2}/\d{4}"></asp:RegularExpressionValidator>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style2"><label class="rotulo">Grupo</label></td>
+                        <td class="style1">
+                            <asp:DropDownList ID="CmbGrupos" runat="server">
+                            </asp:DropDownList>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server"
+                                                        ControlToValidate="CmbGrupos" ErrorMessage="Obrigatório"></asp:RequiredFieldValidator>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style2"><label class="rotulo">Observação</label></td>
+                        <td class="style1">
+                            <asp:TextBox ID="Observacao" TextMode="MultiLine" runat="server" Height="60px"
+                                         Width="290px"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"
+                                                        ControlToValidate="Observacao" ErrorMessage="Obrigatório"></asp:RequiredFieldValidator>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style2">
+                            <asp:TextBox ID="IdTarefa" runat="server" Visible="false" ReadOnly="True"
+                                         Text="0" Width="21px"></asp:TextBox>
+                        </td>
+                        <td class="style4">
+                            <asp:Button ID="Button1" CssClass="botao" Text="Salvar" OnClick="Salvar" runat="server" />
+                        </td>
+                    </tr>
+                </table>
+            </div><!-- center -->
+            <div id="bottom"></div><!-- bottom -->
+        </form>
+    </div>

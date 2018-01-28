@@ -1,0 +1,19 @@
+﻿::-webkit-scrollbar {
+    width: 12px;
+    height: 4px;
+    background: #343434;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #039;
+}
+
+* {
+    scrollbar-face-color: #039;
+    scrollbar-highlight-color: #039;
+    scrollbar-3dlight-color: #343434;
+    scrollbar-darkshadow-color: #343434;
+    scrollbar-shadow-color: #039;
+    scrollbar-arrow-color: #343434;
+    scrollbar-track-color: #343434;
+}

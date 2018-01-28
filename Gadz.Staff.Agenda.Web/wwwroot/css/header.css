@@ -1,0 +1,28 @@
+﻿#header {
+    clear: both;
+    height: 38px;
+    background-color: #000;
+    border-bottom: 1px solid #1b1b1b;
+}
+
+    #header h1 {
+        margin: 10px;
+        font-family: Tahoma;
+        font-size: 12px;
+        font-weight: bold;
+        color: #FFF;
+        float: left;
+    }
+
+    #header .botao {
+        float: right;
+        width: 100px;
+        height: 30px;
+        margin: 5px 5px 5px 0px;
+        background-color: transparent;
+        background-image: none;
+    }
+
+    #header #imgLogo {
+        display: none
+    }

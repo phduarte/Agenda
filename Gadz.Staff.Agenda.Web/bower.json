@@ -1,0 +1,11 @@
+{
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "jquery": "3.3.1",
+    "bootstrap": "*",
+    "jquery.maskedinput": "1.4.1",
+    "jquery-ui": "1.12.1",
+    "jquery.tablesorter": "2.29.4"
+  }
+}

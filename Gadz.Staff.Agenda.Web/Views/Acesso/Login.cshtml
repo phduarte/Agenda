@@ -1,0 +1,59 @@
+﻿@model Gadz.Staff.Agenda.Web.Models.ICredencial
+<div id="content">
+    <div id="box-login" class="box-center">
+        <div class="box_login">
+            <img src="../images/bg/logo.png" class="logo" alt="" />
+            <div class="caracteristicas">
+                <ul>
+                    <li>Agenda de rotinas</li>
+                    <li>Acompanhamento de SLAs</li>
+                    <li>Relatórios de ocupação</li>
+                </ul>
+            </div><!-- caracteristicas -->
+        </div><!-- box_left -->
+        <div class="box_login" style=" border:1px solid #F8F8F8;">
+            <div class="top">
+                <h5># Acesso</h5>
+            </div><!-- top -->
+            <div class="center">
+                <form action="@Url.Action("Login","Acesso")" method="post" enctype="multipart/form-data" >
+                    <table>
+                        <tr>
+                            <td style="width:110px;"><label for="usuario">Usuário</label></td>
+                            <td>
+                                <input type="text"
+                                       id="Login"
+                                       name="Login"
+                                       value="@Model.Login"
+                                       style=" width:100px"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="senha">Senha</label></td>
+                            <td>
+                                <input type="password"
+                                       id="Senha"
+                                       name="Senha"
+                                       value="@Model.Senha"
+                                       style=" width:100px;" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" value="Entrar" class="botao" />
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div><!-- center -->
+            <div class="bottom">
+                <p>Para acessar utilize o usuário e senha da rede.<br />Certifique-se de que sua senha não esteja expirada.</p>
+            </div><!-- bottom -->
+        </div> <!-- box_right -->
+    </div>
+</div>
+
+@section Styles {
+    <link href="~/css/login.css" rel="stylesheet" />
+}

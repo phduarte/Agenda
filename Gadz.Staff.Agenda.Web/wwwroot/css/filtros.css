@@ -1,0 +1,20 @@
+﻿#box-filtro, #box-tabela {
+    clear: both;
+}
+
+    #box-tabela, #box-tabela table td {
+        text-align: center;
+        border: 1px solid #CCC;
+    }
+
+    /*
+    BOX FILTRO
+*/
+
+    #box-filtro table td {
+        padding: 2px;
+    }
+
+    #box-filtro tr:hover td {
+        color: #00C;
+    }

@@ -1,0 +1,20 @@
+﻿#barra-guias {
+    padding: 5px;
+}
+
+    #barra-guias .guias {
+        border: #F8F8F8 1px solid;
+        background: #FFF;
+        color: #06C;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        text-decoration: none;
+        text-transform: capitalize;
+        margin: 2px;
+        padding: 2px 10px;
+    }
+
+        #barra-guias .guias:hover {
+            color: #666;
+            text-decoration: underline;
+        }

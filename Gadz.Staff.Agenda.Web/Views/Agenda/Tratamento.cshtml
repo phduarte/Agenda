@@ -1,0 +1,105 @@
+﻿<div id="box-formulario" class="box-center">
+    <form id="form1" runat="server">
+        <div id="top">
+            <h5># Tratamento</h5>
+            <a href="../Agenda/Pesquisar.aspx" class="fechar"></a>
+        </div><!-- top -->
+        <div id="center">
+            <table>
+                <tr>
+                    <td class="style6"><label class="rotulo">Prazo</label></td>
+                    <td class="style7">
+                        <asp:TextBox ID="txtPrazo" runat="server" EnableViewState="true"
+                                     Width="130px" ReadOnly="true"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style6"><label class="rotulo">Data do Envio</label></td>
+                    <td class="style7">
+                        <asp:TextBox ID="txtDataEnvio" runat="server" EnableViewState="true"
+                                     Width="130px" AutoPostBack="True"></asp:TextBox>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
+                                                        ErrorMessage="Formato inválido!" Height="16px"
+                                                        ControlToValidate="txtDataEnvio"
+                                                        ValidationExpression="[0-3][0-9]/[01][0-9]/[0-2][0-9]{3}( [0-2][0-9]:[0-5][0-9]:[0-5][0-9])?"
+                                                        ForeColor="Red"></asp:RegularExpressionValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style6"><label class="rotulo">Status</label></td>
+                    <td class="style1">
+                        <asp:DropDownList ID="cmbStatus" runat="server" Height="20px" Width="150px"
+                                          AutoPostBack="True" BackColor="#FFFFCC"
+                                          onselectedindexchanged="ListarDiagnosticos" ClientIDMode="Static">
+                        </asp:DropDownList>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
+                                                    ControlToValidate="cmbStatus" ErrorMessage="Obrigatório" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style6"><label class="rotulo">Diagnóstico</label></td>
+                    <td class="style1">
+                        <asp:DropDownList ID="cmbDiagnostico" runat="server" Height="20px"
+                                          Width="240px" BackColor="#FFFFCC" Enabled="False" ClientIDMode="Static">
+                        </asp:DropDownList>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
+                                                    ErrorMessage="Obrigatório" ControlToValidate="cmbDiagnostico" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style6"><label class="rotulo">Observação</label></td>
+                    <td class="style1">
+                        <asp:TextBox ID="txtObs" TextMode="MultiLine" runat="server" Height="60px"
+                                     Width="240px"></asp:TextBox>
+                        <asp:CustomValidator ID="CustomValidator1"
+                                             runat="server"
+                                             OnServerValidate="Valida"
+                                             ErrorMessage="Obrigatório" ForeColor="Red"></asp:CustomValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style6">
+                        <asp:TextBox ID="txtIdAgendamento" runat="server" Visible="false" ReadOnly="True"
+                                     Text="0" Width="31px" Height="20px"></asp:TextBox>
+                    </td>
+                    <td class="style4">
+                        <asp:Button ID="Button1" CssClass="botao" Text="Salvar" OnClick="Salvar" runat="server" />
+                    </td>
+                </tr>
+            </table>
+        </div><!-- center -->
+        <div id="bottom"></div><!-- bottom -->
+    </form>
+</div>
+@section Styles {
+    <style type="text/css">
+        #box-formulario {
+            width: 450px;
+        }
+
+        .style1 {
+            width: 350px;
+        }
+
+        .style4 {
+            width: 350px;
+        }
+
+        .style6 {
+            width: 100px;
+        }
+
+        .style7 {
+            width: 350px;
+        }
+    </style>
+}
+
+@section Scripts {
+
+    <script type="text/javascript">
+        $(function () {
+            $(".data").datepicker();
+        });
+    </script>
+}

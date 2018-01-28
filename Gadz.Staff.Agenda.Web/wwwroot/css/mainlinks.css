@@ -1,0 +1,50 @@
+﻿#mainBoxlinks {
+    margin: 0 auto;
+    width: 1024px;
+    height: 100%;
+}
+
+    #mainBoxlinks .plinks {
+        float: left;
+        clear: none;
+        font-family: Verdana, Geneva, sans-serif;
+        padding: 10px 0px 10px 10px;
+        margin: 10px 0px 0px 10px;
+        width: 485px;
+        height: 80px;
+        background-image: url('img/bg/plinks.png');
+        background-repeat: no-repeat;
+    }
+
+        #mainBoxlinks .plinks a {
+            text-decoration: none;
+        }
+
+        #mainBoxlinks .plinks img {
+            float: left;
+            width: 48px;
+            height: 48px;
+            border: none;
+        }
+
+        #mainBoxlinks .plinks h5 {
+            font-size: 18px;
+            color: #000;
+            margin: 10px 0;
+            text-indent: 20px;
+            text-decoration: underline;
+        }
+
+        #mainBoxlinks .plinks p {
+            font-size: 11px;
+            color: #000;
+            margin: 10px 0;
+            text-indent: 20px;
+        }
+
+        #mainBoxlinks .plinks img {
+            float: left;
+            width: 48px;
+            height: 48px;
+            border: none;
+        }

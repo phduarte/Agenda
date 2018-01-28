@@ -1,0 +1,113 @@
+﻿@section Styles {
+    <style type="text/css">
+        #box-agenda {
+            padding: 0px;
+            margin: 0 auto;
+            width: 805px;
+        }
+
+        #box-grafico {
+            clear: both;
+        }
+
+            #box-grafico * {
+                padding: 0px;
+                margin: 0px;
+            }
+    </style>
+}
+@section Scripts {
+    <script type="text/javascript">
+        function OpenReports(url) {
+            url += "&grupo=<% = this.Grupo.SelectedValue %>";
+            window.open(url, "janela", "width=600,height=400,resizable=yes,scrollbars=yes");
+        }
+    </script>
+}
+
+    <form id="Form1" runat="server">
+        <div id="box-agenda" class="box-center">
+            <div id="box-filtro">
+                <fieldset class="bloco">
+                    <legend>Atribuição</legend>
+                    <table>
+                        <tr>
+                            <td><label>Grupo</label></td>
+                            <td>
+                                <asp:DropDownList ID="Grupo" runat="server" AutoPostBack="True"
+                                                  ViewStateMode="Enabled">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </div>
+            <div id="box-grafico">
+                <asp:Chart ID="Chart1" runat="server" Width="400px" Height="300px">
+                    <legends>
+                        <asp:Legend Alignment="Center" Docking="Bottom" IsTextAutoFit="False" Name="Default" LegendStyle="Row" />
+                    </legends>
+                    <Titles>
+                        <asp:Title Text="Status das Entregas"></asp:Title>
+                    </Titles>
+                    <Series>
+                        <asp:Series Name="Default" ChartType="Pie">
+                            <Points>
+                                <asp:DataPoint Color="#FCD209" Url="javascript:OpenReports('StatusEntregas.aspx?tipo=pf');" ToolTip="#VALY Demanda(s) pendente(s) fora do prazo" LegendText="FP" YValues="25" Label="#PERCENT{P2}" />
+                                <asp:DataPoint Color="#3399CC" Url="javascript:OpenReports('StatusEntregas.aspx?tipo=pd');" ToolTip="#VALY Demanda(s) pendente(s) dentro do prazo" LegendText="DP" YValues="25" Label="#PERCENT{P2}" />
+                                <asp:DataPoint Color="#4BB549" Url="javascript:OpenReports('StatusEntregas.aspx?tipo=e');" ToolTip="#VALY Demanda(s) entregue(s)" LegendText="Entregue" YValues="25" LabelForeColor="White" Label="#PERCENT{P2}" />
+                                <asp:DataPoint Color="#EC594B" Url="javascript:OpenReports('StatusEntregas.aspx?tipo=c');" ToolTip="#VALY Demanda(s) cancelada(s)" LegendText="Cancelado" YValues="25" Label="#PERCENT{P2}" />
+                            </Points>
+                        </asp:Series>
+                    </Series>
+                    <ChartAreas>
+                        <asp:ChartArea Name="ChartArea1">
+                        </asp:ChartArea>
+                    </ChartAreas>
+                </asp:Chart>
+                <asp:Chart ID="Chart2" runat="server" Width="400px" Height="300px">
+                    <legends>
+                        <asp:Legend Alignment="Center" Docking="Bottom" IsTextAutoFit="False" Name="Default" LegendStyle="Row" />
+                    </legends>
+                    <Titles>
+                        <asp:Title Text="Cumprimento de SLAs"></asp:Title>
+                    </Titles>
+                    <Series>
+                        <asp:Series Name="Default" ChartType="Pie">
+                            <Points>
+                                <asp:DataPoint Color="#4BB549" Url="javascript:OpenReports('CumprimentoSLAs.aspx?tipo=d');" LegendText="Dentro do prazo" ToolTip="#VALY Demanda(s) entregue(s) dentro do prazo" YValues="50" LabelForeColor="White" Label="#PERCENT{P2}" />
+                                <asp:DataPoint Color="#EC594B" Url="javascript:OpenReports('CumprimentoSLAs.aspx?tipo=f');" LegendText="Fora do prazo" ToolTip="#VALY Demanda(s) entregue(s) fora do prazo" YValues="50" Label="#PERCENT{P2}" />
+                            </Points>
+                        </asp:Series>
+                    </Series>
+                    <ChartAreas>
+                        <asp:ChartArea Name="ChartArea1">
+                        </asp:ChartArea>
+                    </ChartAreas>
+                </asp:Chart>
+                <asp:Chart ID="Chart3" runat="server" Width="800px" Height="290px">
+                    <Titles>
+                        <asp:Title Text="Motivos de Atraso"></asp:Title>
+                    </Titles>
+                    <Series>
+                        <asp:Series Name="Default" ChartType="Column" IsValueShownAsLabel="true" />
+                    </Series>
+                    <ChartAreas>
+                        <asp:ChartArea Name="ChartArea1">
+                            <AxisY Enabled="False">
+                                <MajorGrid LineColor="WhiteSmoke" />
+                                <MinorGrid LineColor="WhiteSmoke" />
+                            </AxisY>
+                            <AxisX>
+                                <MajorGrid LineColor="WhiteSmoke" />
+                                <MinorGrid LineColor="WhiteSmoke" />
+                            </AxisX>
+                        </asp:ChartArea>
+                    </ChartAreas>
+                    <Legends>
+                        <asp:Legend Enabled="false"></asp:Legend>
+                    </Legends>
+                </asp:Chart>
+            </div>
+        </div>
+    </form>

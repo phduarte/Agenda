@@ -1,0 +1,94 @@
+﻿@section Styles {
+    <style type="text/css">
+        #box-agenda {
+            margin: 0 auto;
+            width: 900px;
+        }
+
+        #box-tabela {
+            background-color: #FFF;
+        }
+    </style>
+}
+@section Scripts {
+    <script type="text/javascript">
+        $(window).ready(function () { ContentResize(); });
+        $(window).resize(function () { ContentResize(); });
+    </script>
+}
+
+    <form id="Form1" runat="server">
+        <div id="box-agenda">
+            <div id="box-filtro">
+                <fieldset class="bloco">
+                    <legend>Atribuição</legend>
+                    <table>
+                        <tr>
+                            <td><label>Grupo</label></td>
+                            <td>
+                                <asp:DropDownList ID="Grupo" runat="server" AutoPostBack="True"
+                                                  ViewStateMode="Enabled" onselectedindexchanged="ListarUsuarios">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Responsável</label></td>
+                            <td>
+                                <asp:DropDownList ID="Responsavel" runat="server" AutoPostBack="True"
+                                                  ViewStateMode="Enabled">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </div>
+            <div id="box-tabela">
+                <asp:Chart ID="Chart1" runat="server" Width="800px">
+                    <Titles>
+                        <asp:Title ToolTip="Evolução de Aderência"
+                                   Text="Evolução de Aderência" />
+                    </Titles>
+                    <legends>
+                        <asp:Legend Alignment="Center"
+                                    Docking="Bottom"
+                                    IsTextAutoFit="False"
+                                    Name="Default"
+                                    LegendStyle="Row" />
+                    </legends>
+                    <Series>
+                        <asp:Series BorderDashStyle="Solid"
+                                    BorderColor="LightGray"
+                                    BackSecondaryColor="Transparent"
+                                    Name="Tarefas"
+                                    IsValueShownAsLabel="true"
+                                    Color="WhiteSmoke" LabelForeColor="LightGray"
+                                    ToolTip="#VALX" CustomProperties="BarLabelStyle=Right" />
+                        <asp:Series Name="Aderencia"
+                                    BorderDashStyle="Solid"
+                                    BorderColor="LightGray"
+                                    IsValueShownAsLabel="true"
+                                    LabelFormat="{0:P2}"
+                                    ChartType="Line" LabelForeColor="#33CC33"
+                                    Color="0, 255, 0"
+                                    ToolTip="#VALY no dia #VALX"
+                                    CustomProperties="BarLabelStyle=Left" BorderWidth="3" YAxisType="Secondary" />
+                    </Series>
+                    <ChartAreas>
+                        <asp:ChartArea Name="ChartArea1">
+                            <AxisX LineColor="Red" Interval="1" Minimum="0" TextOrientation="Horizontal">
+                                <MajorGrid LineColor="WhiteSmoke" />
+                                <LabelStyle ForeColor="Gray" />
+                            </AxisX>
+                            <AxisY LineColor="LightGray" Interval="1" Minimum="0" TextOrientation="Horizontal" Enabled="False">
+                                <MajorGrid LineColor="WhiteSmoke" />
+                                <LabelStyle Enabled="false" />
+                            </AxisY>
+                            <AxisY2 LineColor="WhiteSmoke" Enabled="False">
+                                <MajorGrid LineColor="WhiteSmoke" />
+                            </AxisY2>
+                        </asp:ChartArea>
+                    </ChartAreas>
+                </asp:Chart>
+            </div>
+        </div>
+    </form>

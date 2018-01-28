@@ -1,0 +1,123 @@
+﻿
+@section Styles{
+    <style type="text/css">
+        .box-tarefa {
+            height: 20px;
+        }
+
+        .plan {
+            height: 16px;
+            border: 2px solid #000;
+        }
+
+        .real {
+            height: 16px;
+            background-color: #0F0;
+        }
+
+        .tabela {
+            margin: 0 auto;
+        }
+
+            .tabela thead {
+                background-color: #09C;
+            }
+
+            .tabela tbody, .tabela tbody td {
+                border: 1px solid #CCC;
+            }
+    </style>
+}
+@section Scripts{
+    <script type="text/javascript">
+        $(window).ready(function () { ContentResize(); });
+        $(window).resize(function () { ContentResize(); });
+    </script>
+}
+<table class="tabela">
+    <thead>
+        <tr>
+            <td>Funcionário</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style=" width:700px;"></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>PAULO DUARTE</td>
+            <td>CONTROLE REALIZADO X DECLARADO TIM FIBER</td>
+            <td></td>
+            <td></td>
+            <td>
+                <div class="box-tarefa" style="width:100%; background-color:#F8F8F8;">
+                    <div class="plan" style="position:absolute;width:8%;left:62%;">
+                        <div class="real" style="width:50%;"></div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>PAULO DUARTE</td>
+            <td>CONTROLE REALIZADO X DECLARADO TIM FIBER</td>
+            <td></td>
+            <td></td>
+            <td>
+                <div class="box-tarefa" style="width:100%; background-color:#F8F8F8;">
+                    <div class="plan" style="position:absolute;width:1%;left:42%;">
+                        <div class="real" style="width:50%;"></div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>PAULO DUARTE</td>
+            <td>CONTROLE REALIZADO X DECLARADO TIM FIBER</td>
+            <td></td>
+            <td></td>
+            <td>
+                <div id="Div2" class="box-tarefa" style="width:100%; background-color:#F8F8F8;">
+                    <div class="plan" style="position:absolute;width:8%;left:41.7%;">
+                        <div class="real" style="width:50%;"></div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>PAULO DUARTE</td>
+            <td>CONTROLE REALIZADO X DECLARADO TIM FIBER</td>
+            <td></td>
+            <td></td>
+            <td>
+                <div id="Div3" class="box-tarefa" style="width:100%; background-color:#F8F8F8;">
+                    <div class="plan" style="position:absolute;width:8%;left:39.6%;">
+                        <div class="real" style="width:50%;"></div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>PAULO DUARTE</td>
+            <td>CONTROLE REALIZADO X DECLARADO TIM FIBER</td>
+            <td></td>
+            <td></td>
+            <td>
+                <div class="box-tarefa" style="width:100%; background-color:#F8F8F8;">
+                    <div class="plan" style="position:absolute;width:2%;left:35%;">
+                        <div class="real" style="width:50%;"></div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tfoot>
+</table>

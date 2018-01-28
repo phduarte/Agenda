@@ -1,0 +1,42 @@
+﻿#status {
+    clear: both;
+    height: 39px;
+    font-size: 10px;
+    background-color: #222121;
+    border-bottom: 1px solid #222121;
+    color: #888;
+}
+
+    #status .rota {
+        font-family: Verdana;
+        font-size: 11px;
+        float: left;
+        line-height: 38px;
+        vertical-align: middle;
+        margin-left: 10px;
+    }
+
+        #status .rota > a {
+            text-decoration: none;
+        }
+
+            #status .rota > a:hover {
+                text-decoration: underline;
+            }
+
+    #status .perfil {
+        position: relative;
+        float: right;
+        line-height: 38px;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    #status .botao {
+        position: relative;
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        float: right;
+        color: #03F;
+        margin: 13px 20px 0px 0px;
+    }

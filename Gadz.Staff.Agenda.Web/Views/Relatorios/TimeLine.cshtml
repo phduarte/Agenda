@@ -1,0 +1,175 @@
+﻿@section Styles{
+    <style type="text/css">
+        . {
+            height: 100%;
+            width: 100%;
+        }
+
+        #content {
+            /*background-color:#06C;*/
+            position: relative;
+        }
+
+        #box-agenda, #relatorio {
+            width: 1024px;
+            margin: 0 auto;
+        }
+
+        .nome {
+            color: #CCC;
+            font-weight: bold;
+            margin-right: 10px;
+            float: right;
+            line-height: 31px;
+        }
+
+        .linha {
+            width: 100%;
+            height: 31px;
+            clear: left;
+            border-bottom: 1px solid #FFF;
+            background-color: #FFF;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .evento {
+            height: 25px;
+            border: 1px solid #CCC;
+            background-color: #F8F8F8;
+            position: absolute;
+            float: left;
+            margin: 2px 0px 2px 0px;
+        }
+
+        .regua {
+            background-color: #F6F6F8;
+            color: #AAA;
+            text-align: center;
+            display: inline-block;
+            width: 21px;
+            height: 20px;
+            line-height: 20px;
+            padding: 0px;
+            border-right: 1px solid #CCC;
+            font-size: 11px;
+        }
+
+        .find {
+            background-color: #EEE;
+        }
+
+        .concluido {
+            height: 100%;
+            position: absolute;
+            background-color: #0F0;
+        }
+
+        .pendente {
+            background-color: #F00;
+        }
+    </style>
+}
+@section Scripts{
+    <script type="text/javascript">
+        $(function () {
+            $(".data").datepicker();
+            $(".data").mask("99/99/9999");
+        });
+
+        $(window).ready(function () { ContentResize(); });
+        $(window).resize(function () { ContentResize(); });
+    </script>
+}
+
+    <form id="Form1" runat="server">
+        <div id="box-agenda">
+            <div id="box-filtro">
+                <fieldset class="bloco">
+                    <legend>Período</legend>
+                    <table>
+                        <tr>
+                            <td><label>Referência</label></td>
+                            <td>
+                                <asp:TextBox ID="DataReferencia" CssClass="data" runat="server" AutoPostBack="true"></asp:TextBox>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <fieldset class="bloco">
+                    <legend>Atribuição</legend>
+                    <table>
+                        <tr>
+                            <td><label>Grupo</label></td>
+                            <td>
+                                <asp:DropDownList ID="Grupo" runat="server" AutoPostBack="True"
+                                                  ViewStateMode="Enabled" onselectedindexchanged="ListarUsuarios">
+                                    <asp:ListItem>BI</asp:ListItem>
+                                    <asp:ListItem>MIS-BH</asp:ListItem>
+                                    <asp:ListItem>MIS-JF</asp:ListItem>
+                                    <asp:ListItem>CO-JF</asp:ListItem>
+                                    <asp:ListItem>COMPRAS</asp:ListItem>
+                                    <asp:ListItem>CONTROLADORIA</asp:ListItem>
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Responsável</label></td>
+                            <td>
+                                <asp:DropDownList ID="Responsavel" runat="server" AutoPostBack="True"
+                                                  ViewStateMode="Enabled">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </div>
+            <div id="relatorio" style="clear:both;">
+                <table>
+                    <tr>
+                        <td style="width:250px;"></td>
+                        <%
+                        int i = 1;
+
+                        foreach(string d in dias) {
+                        %>
+                        <td class="regua <% = d %>"><% = i.ToString() %></td>
+                        <%
+                        i++;
+                        } %>
+                    </tr>
+                    <% foreach (Linha li in linhas) {  %>
+                    <tr>
+                        <td class="nome"><% = li.Nome %></td>
+                        <td colspan="31" style="border-left:1px solid #CCC;">
+                            <div class="linha">
+                                <% foreach(Linha.Tarefa ta in li.Tarefas){ %>
+                                <div class="evento" style="width:<% = ta.Width %>; left:<% = ta.Left %>;" title="<% = ta.Nome %>">
+                                    <div class="concluido" style="width:100%; left:0%;" title="<% = ta.Nome %>"></div>
+                                </div>
+                                <% } %>
+                            </div>
+                        </td>
+                    </tr>
+                    <%} %>
+                    <%--
+                    <tr>
+                        <td class="nome">PAULO DUARTE</td>
+                        <td colspan="31" style="border-left:1px solid #CCC;">
+                            <div class="linha">
+                                <div class="evento" style="width:30%; left:0%;" title="Nome da demanda (30% pendentes)">
+                                    <div class="concluido" style="width:78%; left:0%;" title="Nome da demanda (70% concluído)"></div>
+                                </div>
+                                <div class="evento" style="width:30%; left:40%;"></div>
+
+                                <div class="evento" style="width:10%; left:90%;">
+                                    <div class="concluido" style="width:100%; left:0%;"></div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>--%>
+
+                </table>
+            </div>
+        </div>
+    </form>
