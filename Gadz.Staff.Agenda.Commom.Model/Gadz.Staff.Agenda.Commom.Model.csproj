@@ -4,8 +4,4 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Gadz.Staff.Agenda.Commom.Model\Gadz.Staff.Agenda.Commom.Model.csproj" />
-  </ItemGroup>
-
 </Project>

@@ -15,9 +15,6 @@ namespace Gadz.Staff.Agenda.Web.Controllers {
         }
 
         public IActionResult Login() {
-
-            var cookie = new DefaultHttpContext().Request.Cookies["userId"];
-
             var c = new Usuario();
             return View(c);
         }

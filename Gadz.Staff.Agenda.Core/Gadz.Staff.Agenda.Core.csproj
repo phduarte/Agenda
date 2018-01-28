@@ -5,8 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DomainModel\" />
     <Folder Include="Infrastructure\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Gadz.Staff.Agenda.Commom.Model\Gadz.Staff.Agenda.Commom.Model.csproj" />
   </ItemGroup>
 
 </Project>
