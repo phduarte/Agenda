@@ -1,8 +1,8 @@
-﻿using Gadz.Staff.Access.DomainModel.Rules;
-using Gadz.Staff.Agenda.Commom.Model;
+﻿using Gadz.Agenda.Access.DomainModel.Rules;
+using Gadz.Agenda.Commom.Model;
 using System.Collections.Generic;
 
-namespace Gadz.Staff.Access.DomainModel.Users {
+namespace Gadz.Agenda.Access.DomainModel.Users {
     public interface IUser
     {
         Identity Id { get; }

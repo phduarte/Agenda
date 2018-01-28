@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Gadz.Staff.Agenda.Controllers
+namespace Gadz.Agenda.Controllers
 {
     public class AgendaController : Controller
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Gadz.Staff.Agenda.Commom.Model
+namespace Gadz.Agenda.Commom.Model
 {
     public struct Email
     {

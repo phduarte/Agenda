@@ -1,11 +1,11 @@
-﻿using Gadz.Staff.Agenda.Web.Models;
+﻿using Gadz.Agenda.Web.Models;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Gadz.Staff.Agenda.Helpers
+namespace Gadz.Agenda.Helpers
 {
     public class AccessHelper {
 

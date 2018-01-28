@@ -14,9 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Gadz.Staff.Access\Gadz.Staff.Access.csproj" />
-    <ProjectReference Include="..\Gadz.Staff.Agenda.Commom.Model\Gadz.Staff.Agenda.Commom.Model.csproj" />
-    <ProjectReference Include="..\Gadz.Staff.Agenda.Core\Gadz.Staff.Agenda.Core.csproj" />
+    <ProjectReference Include="..\Gadz.Staff.Access\Gadz.Agenda.Access.csproj" />
+    <ProjectReference Include="..\Gadz.Staff.Agenda.Commom.Model\Gadz.Agenda.Commom.Model.csproj" />
+    <ProjectReference Include="..\Gadz.Staff.Agenda.Core\Gadz.Agenda.Core.csproj" />
   </ItemGroup>
 
 </Project>

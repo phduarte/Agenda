@@ -1,4 +1,4 @@
-﻿namespace Gadz.Staff.Agenda.Web.Models {
+﻿namespace Gadz.Agenda.Web.Models {
     public class Credencial : ICredencial {
 
         public string Login { get; set; }

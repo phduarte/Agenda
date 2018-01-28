@@ -1,8 +1,8 @@
-﻿using Gadz.Staff.Agenda.Commom.Model;
-using Gadz.Staff.Agenda.Core.DomainModel.Horarios;
-using Gadz.Staff.Agenda.Core.DomainModel.Pessoas;
+﻿using Gadz.Agenda.Commom.Model;
+using Gadz.Agenda.Core.DomainModel.Horarios;
+using Gadz.Agenda.Core.DomainModel.Pessoas;
 
-namespace Gadz.Staff.Agenda.Core.DomainModel.Tarefas {
+namespace Gadz.Agenda.Core.DomainModel.Tarefas {
     public interface ITarefa : IEntity {
         IHorario Horario { get; }
         IPessoa Responsavel { get; }

@@ -1,8 +1,8 @@
-﻿using Gadz.Staff.Access.DomainModel.Users;
-using Gadz.Staff.Agenda.Commom.Model;
+﻿using Gadz.Agenda.Access.DomainModel.Users;
+using Gadz.Agenda.Commom.Model;
 using System.Collections.Generic;
 
-namespace Gadz.Staff.Access.DomainModel.Rules {
+namespace Gadz.Agenda.Access.DomainModel.Rules {
     internal interface IRuleRepository
     {
         void Add(IRule rule);

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gadz.Staff.Agenda", "Gadz.Staff.Agenda.Web\Gadz.Staff.Agenda.csproj", "{A2AF3688-6D0D-4A5D-AF9C-463B202BBB23}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gadz.Agenda", "Gadz.Staff.Agenda.Web\Gadz.Agenda.csproj", "{A2AF3688-6D0D-4A5D-AF9C-463B202BBB23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gadz.Staff.Agenda.Core", "Gadz.Staff.Agenda.Core\Gadz.Staff.Agenda.Core.csproj", "{D7FCAC0C-F6DD-41DD-A3EB-7AC52E2E67CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gadz.Agenda.Core", "Gadz.Staff.Agenda.Core\Gadz.Agenda.Core.csproj", "{D7FCAC0C-F6DD-41DD-A3EB-7AC52E2E67CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gadz.Staff.Access", "Gadz.Staff.Access\Gadz.Staff.Access.csproj", "{9FAA7A57-8000-4825-94D6-4E6D1B69A49D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gadz.Agenda.Access", "Gadz.Staff.Access\Gadz.Agenda.Access.csproj", "{9FAA7A57-8000-4825-94D6-4E6D1B69A49D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. Commom", "0. Commom", "{6BE5EDFE-ACF0-485F-A3F0-9A69AF51FEBB}"
 EndProject
@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Core", "2. Core", "{605F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Interfaces", "3. Interfaces", "{120E2B31-7734-4C72-9597-CAC85193F79F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gadz.Staff.Agenda.Commom.Model", "Gadz.Staff.Agenda.Commom.Model\Gadz.Staff.Agenda.Commom.Model.csproj", "{F847FCFA-AB82-471F-A028-F8CAF9DD1702}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gadz.Agenda.Commom.Model", "Gadz.Staff.Agenda.Commom.Model\Gadz.Agenda.Commom.Model.csproj", "{F847FCFA-AB82-471F-A028-F8CAF9DD1702}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Access", "1. Access", "{50400350-A459-4714-B6F0-0895A6A4E6F9}"
 EndProject

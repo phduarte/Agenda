@@ -1,11 +1,11 @@
-﻿using Gadz.Staff.Access.DomainModel;
-using Gadz.Staff.Access.DomainModel.Rules;
-using Gadz.Staff.Access.DomainModel.Users;
-using Gadz.Staff.Agenda.Commom.Model;
+﻿using Gadz.Agenda.Access.DomainModel;
+using Gadz.Agenda.Access.DomainModel.Rules;
+using Gadz.Agenda.Access.DomainModel.Users;
+using Gadz.Agenda.Commom.Model;
 using System;
 using System.Collections.Generic;
 
-namespace Gadz.Staff.Access.Infrastructure.Data {
+namespace Gadz.Agenda.Access.Infrastructure.Data {
     internal class RuleRepository : IRuleRepository {
 
         public void Add(IRule rule) {

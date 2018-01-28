@@ -1,6 +1,6 @@
-﻿using Gadz.Staff.Agenda.Commom.Model;
+﻿using Gadz.Agenda.Commom.Model;
 
-namespace Gadz.Staff.Access.DomainModel.Rules {
+namespace Gadz.Agenda.Access.DomainModel.Rules {
     internal class Rule : IRule {
 
         public Identity Id { get; private set; }

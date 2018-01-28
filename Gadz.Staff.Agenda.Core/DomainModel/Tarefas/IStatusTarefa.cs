@@ -1,4 +1,4 @@
-﻿namespace Gadz.Staff.Agenda.Core.DomainModel.Tarefas {
+﻿namespace Gadz.Agenda.Core.DomainModel.Tarefas {
     public interface IStatusTarefa {
     }
 }

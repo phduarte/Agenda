@@ -1,7 +1,7 @@
-﻿using Gadz.Staff.Access.DomainModel.Users;
-using Gadz.Staff.Access.Infrastructure.Data;
+﻿using Gadz.Agenda.Access.DomainModel.Users;
+using Gadz.Agenda.Access.Infrastructure.Data;
 
-namespace Gadz.Staff.Access {
+namespace Gadz.Agenda.Access {
     public class AccessServices {
 
         static IUserRepository _usuarioRepository = new UserRepository();

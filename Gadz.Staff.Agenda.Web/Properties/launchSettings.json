@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Gadz.Staff.Agenda.Web": {
+    "Gadz.Agenda.Web": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

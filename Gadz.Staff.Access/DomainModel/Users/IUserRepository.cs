@@ -1,6 +1,6 @@
-﻿using Gadz.Staff.Agenda.Commom.Model;
+﻿using Gadz.Agenda.Commom.Model;
 
-namespace Gadz.Staff.Access.DomainModel.Users {
+namespace Gadz.Agenda.Access.DomainModel.Users {
     public interface IUserRepository {
         void Add(IUser usuario);
         void Remove(Identity id);

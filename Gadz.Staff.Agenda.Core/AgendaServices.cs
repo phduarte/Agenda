@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Gadz.Staff.Agenda.Core
+namespace Gadz.Agenda.Core
 {
     class AgendaServices
     {

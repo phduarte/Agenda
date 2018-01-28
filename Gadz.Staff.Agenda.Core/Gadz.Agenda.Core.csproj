@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Gadz.Staff.Agenda.Commom.Model\Gadz.Staff.Agenda.Commom.Model.csproj" />
+    <ProjectReference Include="..\Gadz.Staff.Agenda.Commom.Model\Gadz.Agenda.Commom.Model.csproj" />
   </ItemGroup>
 
 </Project>

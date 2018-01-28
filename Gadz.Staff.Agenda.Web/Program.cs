@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace Gadz.Staff.Agenda.Web
+namespace Gadz.Agenda.Web
 {
     public class Program
     {

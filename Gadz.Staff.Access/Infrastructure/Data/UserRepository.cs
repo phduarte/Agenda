@@ -1,10 +1,10 @@
-﻿using Gadz.Staff.Access.DomainModel;
-using Gadz.Staff.Access.DomainModel.Users;
-using Gadz.Staff.Agenda.Commom.Model;
+﻿using Gadz.Agenda.Access.DomainModel;
+using Gadz.Agenda.Access.DomainModel.Users;
+using Gadz.Agenda.Commom.Model;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Gadz.Staff.Access.Infrastructure.Data {
+namespace Gadz.Agenda.Access.Infrastructure.Data {
     internal class UserRepository : IUserRepository {
 
         static IList<IUser> _cache = LoadCache();
