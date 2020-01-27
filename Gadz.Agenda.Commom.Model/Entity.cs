@@ -1,13 +1,16 @@
-﻿namespace Gadz {
+﻿namespace Gadz
+{
     public abstract class Entity : IEntity
     {
         public Identity Id { get; private set; }
 
-        protected Entity() {
+        protected Entity()
+        {
             Id = Identity.Create();
         }
 
-        protected Entity(Identity id) {
+        protected Entity(Identity id)
+        {
             Id = id;
         }
     }

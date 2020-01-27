@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Gadz.Agenda.Controllers
 {
@@ -13,15 +9,18 @@ namespace Gadz.Agenda.Controllers
             return View();
         }
 
-        public IActionResult Cadastrar() {
+        public IActionResult Cadastrar()
+        {
             return View();
         }
 
-        public IActionResult Pesquisar() {
+        public IActionResult Pesquisar()
+        {
             return View();
         }
 
-        public IActionResult Resumo() {
+        public IActionResult Resumo()
+        {
             return View();
         }
     }

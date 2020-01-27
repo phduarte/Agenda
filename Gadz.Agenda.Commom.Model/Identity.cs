@@ -1,31 +1,38 @@
 ﻿using System;
 
-namespace Gadz {
+namespace Gadz
+{
     public struct Identity
     {
-        string _id;
+        private string _id;
 
-        public Identity(string id) {
+        public Identity(string id)
+        {
             _id = id;
         }
 
-        public static Identity Create() {
+        public static Identity Create()
+        {
             return new Identity(Guid.NewGuid().ToString());
         }
 
-        public override bool Equals(object obj) {
-            if(obj is Identity id) {
+        public override bool Equals(object obj)
+        {
+            if (obj is Identity id)
+            {
                 return ToString().Equals(id.ToString());
             }
 
             return false;
         }
 
-        public override int GetHashCode() {
+        public override int GetHashCode()
+        {
             return _id.GetHashCode();
         }
 
-        public override string ToString() {
+        public override string ToString()
+        {
             return _id;
         }
     }

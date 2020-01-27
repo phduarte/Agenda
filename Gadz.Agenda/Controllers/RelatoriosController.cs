@@ -1,60 +1,71 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Gadz.Agenda.Controllers {
-    public class RelatoriosController : Controller {
-        public IActionResult Index() {
+namespace Gadz.Agenda.Controllers
+{
+    public class RelatoriosController : Controller
+    {
+        public IActionResult Index()
+        {
             return View();
         }
 
-        public IActionResult AcompanhamentoSLA() {
+        public IActionResult AcompanhamentoSLA()
+        {
             return View();
         }
 
-        public IActionResult ComparativoOcupacao() {
+        public IActionResult ComparativoOcupacao()
+        {
             return View();
         }
 
-        public IActionResult CumprimentoSLAs() {
+        public IActionResult CumprimentoSLAs()
+        {
             return View();
         }
 
-        public IActionResult DashboardSLAs() {
+        public IActionResult DashboardSLAs()
+        {
             return View();
         }
 
-        public IActionResult DemandasFuncionario() {
+        public IActionResult DemandasFuncionario()
+        {
             return View();
         }
 
-        public IActionResult EntregaDentroPrazo() {
+        public IActionResult EntregaDentroPrazo()
+        {
             return View();
         }
 
-        public IActionResult EntregasMISCliente() {
+        public IActionResult EntregasMISCliente()
+        {
             return View();
         }
 
-        public IActionResult EvolucaoAderencia() {
+        public IActionResult EvolucaoAderencia()
+        {
             return View();
         }
 
-        public IActionResult Gantt() {
+        public IActionResult Gantt()
+        {
             return View();
         }
 
-        public IActionResult MotivosAtraso() {
+        public IActionResult MotivosAtraso()
+        {
             return View();
         }
 
-        public IActionResult StatusEntregas() {
+        public IActionResult StatusEntregas()
+        {
             return View();
         }
 
-        public IActionResult TimeLine() {
+        public IActionResult TimeLine()
+        {
             return View();
         }
     }
