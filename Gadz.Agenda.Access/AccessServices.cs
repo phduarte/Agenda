@@ -1,5 +1,5 @@
 ﻿using Gadz.Agenda.Access.DomainModel;
-using Gadz.Agenda.Access.Infrastructure.Data;
+using Gadz.Agenda.Access.Persistence;
 
 namespace Gadz.Agenda.Access {
     public class AccessServices {

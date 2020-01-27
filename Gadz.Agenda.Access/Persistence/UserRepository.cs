@@ -4,7 +4,7 @@ using Gadz;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Gadz.Agenda.Access.Infrastructure.Data {
+namespace Gadz.Agenda.Access.Persistence {
     internal class UserRepository : IUserRepository {
 
         static IList<IUser> _cache = LoadCache();

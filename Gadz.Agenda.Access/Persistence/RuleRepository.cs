@@ -5,7 +5,7 @@ using Gadz;
 using System;
 using System.Collections.Generic;
 
-namespace Gadz.Agenda.Access.Infrastructure.Data {
+namespace Gadz.Agenda.Access.Persistence {
     internal class RuleRepository : IRuleRepository {
 
         public void Add(IRule rule) {
