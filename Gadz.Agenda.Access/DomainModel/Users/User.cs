@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Gadz.Agenda.Access.DomainModel.Rules;
-using Gadz.Agenda.Commom.Model;
+using Gadz.Agenda.Common;
 
 namespace Gadz.Agenda.Access.DomainModel.Users {
     internal class User : IUser {

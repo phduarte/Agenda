@@ -1,6 +1,6 @@
 ﻿using Gadz.Agenda.Access.DomainModel;
 using Gadz.Agenda.Access.DomainModel.Users;
-using Gadz.Agenda.Commom.Model;
+using Gadz.Agenda.Common;
 using System.Collections.Generic;
 using System.Linq;
 

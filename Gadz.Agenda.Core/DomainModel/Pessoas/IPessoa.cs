@@ -1,4 +1,4 @@
-﻿using Gadz.Agenda.Commom.Model;
+﻿using Gadz.Agenda.Common;
 using Gadz.Agenda.Core.DomainModel.Agendas;
 
 namespace Gadz.Agenda.Core.DomainModel.Pessoas {

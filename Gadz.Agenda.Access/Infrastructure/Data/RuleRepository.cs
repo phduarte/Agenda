@@ -1,7 +1,7 @@
 ﻿using Gadz.Agenda.Access.DomainModel;
 using Gadz.Agenda.Access.DomainModel.Rules;
 using Gadz.Agenda.Access.DomainModel.Users;
-using Gadz.Agenda.Commom.Model;
+using Gadz.Agenda.Common;
 using System;
 using System.Collections.Generic;
 

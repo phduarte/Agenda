@@ -1,5 +1,5 @@
 ﻿using Gadz.Agenda.Access.DomainModel.Rules;
-using Gadz.Agenda.Commom.Model;
+using Gadz.Agenda.Common;
 using System.Collections.Generic;
 
 namespace Gadz.Agenda.Access.DomainModel.Users {

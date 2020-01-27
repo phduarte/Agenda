@@ -1,4 +1,4 @@
-﻿namespace Gadz.Agenda.Commom.Model {
+﻿namespace Gadz.Agenda.Common {
     public struct Name
     {
         public string FirstName { get; private set; }

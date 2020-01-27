@@ -1,4 +1,4 @@
-﻿using Gadz.Agenda.Commom.Model;
+﻿using Gadz.Agenda.Common;
 using System;
 
 namespace Gadz.Agenda.Core.DomainModel.Horarios {

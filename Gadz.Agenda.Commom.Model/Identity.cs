@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Gadz.Agenda.Commom.Model {
+namespace Gadz.Agenda.Common {
     public struct Identity
     {
         string _id;
