@@ -1,4 +1,4 @@
-﻿using Gadz.Agenda.Common;
+﻿using Gadz;
 using Gadz.Agenda.Core.DomainModel.Horarios;
 using Gadz.Agenda.Core.DomainModel.Tarefas;
 using System.Collections.Generic;

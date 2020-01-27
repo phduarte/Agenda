@@ -1,4 +1,4 @@
-﻿using Gadz.Agenda.Common;
+﻿using Gadz;
 
 namespace Gadz.Agenda.Access.DomainModel.Rules {
     internal class Rule : IRule {

@@ -1,4 +1,4 @@
-﻿namespace Gadz.Agenda.Common {
+﻿namespace Gadz {
     public abstract class Entity : IEntity
     {
         public Identity Id { get; private set; }

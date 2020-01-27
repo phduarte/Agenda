@@ -1,4 +1,4 @@
-﻿using Gadz.Agenda.Common;
+﻿using Gadz;
 
 namespace Gadz.Agenda.Access.DomainModel.Users {
     public interface IUserRepository {
