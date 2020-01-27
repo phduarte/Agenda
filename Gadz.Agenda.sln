@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gadz.Agenda.Web", "Gadz.Agenda\Gadz.Agenda.Web.csproj", "{A2AF3688-6D0D-4A5D-AF9C-463B202BBB23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gadz.Agenda.Web", "Gadz.Agenda.Web\Gadz.Agenda.Web.csproj", "{A2AF3688-6D0D-4A5D-AF9C-463B202BBB23}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gadz.Agenda", "Gadz.Agenda.Core\Gadz.Agenda.csproj", "{D7FCAC0C-F6DD-41DD-A3EB-7AC52E2E67CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gadz.Agenda", "Gadz.Agenda\Gadz.Agenda.csproj", "{D7FCAC0C-F6DD-41DD-A3EB-7AC52E2E67CE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gadz.Agenda.Access", "Gadz.Agenda.Access\Gadz.Agenda.Access.csproj", "{9FAA7A57-8000-4825-94D6-4E6D1B69A49D}"
 EndProject
@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Core", "1. Core", "{605F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. UI", "3. UI", "{120E2B31-7734-4C72-9597-CAC85193F79F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gadz", "Gadz.Agenda.Commom.Model\Gadz.csproj", "{F847FCFA-AB82-471F-A028-F8CAF9DD1702}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gadz", "Gadz\Gadz.csproj", "{F847FCFA-AB82-471F-A028-F8CAF9DD1702}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Access", "2. Access", "{50400350-A459-4714-B6F0-0895A6A4E6F9}"
 EndProject
