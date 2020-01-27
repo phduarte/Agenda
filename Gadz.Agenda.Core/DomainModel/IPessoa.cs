@@ -1,7 +1,7 @@
 ﻿using Gadz;
-using Gadz.Agenda.Core.DomainModel.Agendas;
+using Gadz.Agenda.Core.DomainModel;
 
-namespace Gadz.Agenda.Core.DomainModel.Pessoas {
+namespace Gadz.Agenda.Core.DomainModel {
     public interface IPessoa : IEntity {
         Name Nome { get; }
         Telephone Telefone { get; }

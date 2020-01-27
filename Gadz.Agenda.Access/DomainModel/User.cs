@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Gadz.Agenda.Access.DomainModel.Rules;
+using Gadz.Agenda.Access.DomainModel;
 using Gadz;
 
-namespace Gadz.Agenda.Access.DomainModel.Users {
+namespace Gadz.Agenda.Access.DomainModel {
     internal class User : IUser {
 
         public Identity Id { get; private set; }
