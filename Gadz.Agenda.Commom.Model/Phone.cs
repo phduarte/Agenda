@@ -1,10 +1,10 @@
 ﻿namespace Gadz {
-    public struct Telephone
+    public struct Phone
     {
         public string Ddd { get; private set; }
         public string Number { get; private set; }
 
-        public Telephone(string telefone) {
+        public Phone(string telefone) {
             Ddd = telefone.Substring(0, 2);
             Number = telefone.Substring(2);
         }
