@@ -15,8 +15,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Gadz.Agenda.Access\Gadz.Agenda.Access.csproj" />
-    <ProjectReference Include="..\Gadz.Agenda.Commom.Model\Gadz.csproj" />
-    <ProjectReference Include="..\Gadz.Agenda.Core\Gadz.Agenda.csproj" />
+    <ProjectReference Include="..\Gadz\Gadz.csproj" />
+    <ProjectReference Include="..\Gadz.Agenda\Gadz.Agenda.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,6 @@
-﻿namespace Gadz.Agenda.Web.Controllers
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace Gadz.Agenda.Web.Controllers
 {
     public class HomeController : Controller
     {
