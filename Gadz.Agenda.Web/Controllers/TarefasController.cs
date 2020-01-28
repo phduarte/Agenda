@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace Gadz.Agenda.Controllers
+﻿namespace Gadz.Agenda.Controllers
 {
     public class TarefasController : Controller
     {

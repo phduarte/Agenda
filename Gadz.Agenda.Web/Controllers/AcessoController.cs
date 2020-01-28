@@ -1,8 +1,4 @@
-﻿using Gadz.Agenda.Access;
-using Gadz.Agenda.Web.Models;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using Gadz.Agenda.Web.Models;
 
 namespace Gadz.Agenda.Web.Controllers
 {
