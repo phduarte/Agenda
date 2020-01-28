@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Gadz.Agenda.Core.DomainModel
+namespace Gadz.Agenda.DomainModel
 {
     public interface IHorario : IEntity
     {

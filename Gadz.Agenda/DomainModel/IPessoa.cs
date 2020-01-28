@@ -1,10 +1,9 @@
-﻿namespace Gadz.Agenda.Core.DomainModel
+﻿namespace Gadz.Agenda.DomainModel
 {
     public interface IPessoa : IEntity
     {
         Name Nome { get; }
         Phone Telefone { get; }
-        Email Email { get; }
-        IAgenda Agenda { get; }
+        
     }
 }

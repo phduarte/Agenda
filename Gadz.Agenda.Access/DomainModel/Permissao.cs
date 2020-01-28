@@ -1,16 +1,18 @@
-﻿namespace Gadz.Agenda.Access.DomainModel
+﻿using Gadz.Agenda.DomainModel;
+
+namespace Gadz.Agenda.Access.DomainModel
 {
-    internal class Rule : IRule
+    internal class Permissao : IPermissao
     {
         public Identity Id { get; private set; }
         public string Description { get; internal set; }
 
-        public Rule()
+        public Permissao()
         {
             Id = Identity.Create();
         }
 
-        public Rule(Identity id)
+        public Permissao(Identity id)
         {
             Id = id;
         }

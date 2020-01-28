@@ -1,17 +1,17 @@
-﻿using Gadz.Agenda.Access.DomainModel;
+﻿using Gadz.Agenda.DomainModel;
 using System;
 using System.Collections.Generic;
 
 namespace Gadz.Agenda.Access.Persistence
 {
-    internal class RuleRepository : IRuleRepository
+    internal class PermissaoRepository : IPermissaoRepository
     {
-        public void Add(IRule rule)
+        public void Add(IPermissao rule)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<IRule> AllFrom(IUser user)
+        public IEnumerable<IPermissao> AllFrom(IUsuario user)
         {
             throw new NotImplementedException();
         }

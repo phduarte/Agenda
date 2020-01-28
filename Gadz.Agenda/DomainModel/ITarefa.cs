@@ -1,4 +1,4 @@
-﻿namespace Gadz.Agenda.Core.DomainModel
+﻿namespace Gadz.Agenda.DomainModel
 {
     public interface ITarefa : IEntity
     {

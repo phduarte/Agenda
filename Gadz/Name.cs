@@ -1,4 +1,6 @@
-﻿namespace Gadz
+﻿using System.Linq;
+
+namespace Gadz
 {
     public struct Name
     {
@@ -9,6 +11,31 @@
         {
             FirstName = firstName;
             LastName = lastName;
+        }
+
+        public Name(string name)
+        {
+            var c = name.Split();
+            if (c.Length > 1)
+            {
+                FirstName = c[0];
+                LastName = string.Join(" ", c.Skip(1));
+            }
+            else
+            {
+                FirstName = name;
+                LastName = string.Empty;
+            }
+        }
+
+        public static implicit operator Name(string name)
+        {
+            return new Name(name);
+        }
+
+        public static implicit operator string(Name name)
+        {
+            return name.ToString();
         }
 
         public override string ToString()

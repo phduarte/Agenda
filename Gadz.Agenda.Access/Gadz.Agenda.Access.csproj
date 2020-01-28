@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Gadz.Agenda\Gadz.Agenda.csproj" />
     <ProjectReference Include="..\Gadz\Gadz.csproj" />
   </ItemGroup>
 

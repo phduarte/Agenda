@@ -1,4 +1,5 @@
 ﻿using Gadz.Agenda.Access;
+using Gadz.Agenda.DomainModel;
 using Gadz.Agenda.Web.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -8,11 +9,11 @@ namespace Gadz.Agenda.Web.Controllers
 {
     public class AcessoController : Controller
     {
-        private readonly IAccessServices _accessServices;
+        private readonly IUsuarioServices _userServices;
 
-        public AcessoController(IAccessServices accessServices)
+        public AcessoController(IUsuarioServices userServices)
         {
-            _accessServices = accessServices;
+            _userServices = userServices;
         }
 
         public IActionResult Index()
@@ -29,7 +30,7 @@ namespace Gadz.Agenda.Web.Controllers
         [HttpPost]
         public IActionResult Login(Credencial credencial)
         {
-            var usuario = _accessServices.BuscarUsuario(credencial.Login, credencial.Senha);
+            var usuario = _userServices.BuscarUsuario(credencial.Login, credencial.Senha);
 
             if (usuario != null)
             {
@@ -56,14 +57,14 @@ namespace Gadz.Agenda.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var usuario = _accessServices.BuscarUsuario(model.Login, model.Senha);
+                var usuario = _userServices.BuscarUsuario(model.Login, model.Senha);
 
                 if (usuario != null)
                 {
-                    usuario.ResetPassword(model.Senha);
+                    usuario.AlterarSenha(model.Senha);
                     new DefaultHttpContext().Response.Cookies.Append("userId", usuario.Id.ToString(), new CookieOptions() { Expires = DateTimeOffset.Now.AddDays(1) });
 
-                    _accessServices.AtualizarUsuario(usuario);
+                    _userServices.AtualizarUsuario(usuario);
 
                     return RedirectToAction("Index", "Home");
                 }
