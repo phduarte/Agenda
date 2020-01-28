@@ -27,16 +27,32 @@ namespace Gadz.Agenda.Access.Persistence
             return usuario != null;
         }
 
-        public IUser Get(string username, string password)
+        public IUser Find(string username, string password)
         {
             var usuario = _cache.FirstOrDefault(x => x.Username.Equals(username) && x.Password.Equals(password));
             return usuario;
+        }
+
+        public IUser Get(Identity id)
+        {
+            return _cache.FirstOrDefault(x => x.Id.Equals(id));
         }
 
         public void Remove(Identity id)
         {
             var usuario = _cache.First(x => x.Id.Equals(id));
             _cache.Remove(usuario);
+        }
+
+        public void Remove(IUser user)
+        {
+            _cache.Remove(user);
+        }
+
+        public void Save(IUser user)
+        {
+            Remove(user);
+            Add(user);
         }
     }
 }

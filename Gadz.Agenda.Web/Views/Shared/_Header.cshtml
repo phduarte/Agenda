@@ -1,20 +1,21 @@
-﻿<header id="header">
-    <a href="@Url.Action("Index", "Home")" target="_top">
+﻿<header>
+    <a asp-action="index" asp-controller="home" target="_top">
         <h1>Agenda</h1>
     </a>
-    <a href="@Url.Action("Index", "Home")" target="_top">
+    <a asp-action="index" asp-controller="home" target="_top">
         <img class="botao"
              src="~/images/buttons/btn_alma.png" alt="logotipo almaviva"
              id="imgLogo" />
+
     </a>
-    <a href="~/acesso/logout" target="_top">
+    <a asp-action="logout" asp-controller="acesso" target="_top">
         <img class="botao"
              src="~/images/buttons/btn_sair.png" alt="botão sair"
              id="imgLogout" visible="false" />
     </a>
-    <a href="~/admin" runat="server">
+    <a asp-action="index" asp-controller="admin" target="_top">
         <img class="botao"
-             src="~/images/buttons/btn_adm.png" alt="botão administrador"
-             id="imgAdm" visible="false" />
+        src="~/images/buttons/btn_adm.png" alt="botão administrador"
+        id="imgAdm" visible="false" />
     </a>
-</header><!-- header -->
+</header>

@@ -82,7 +82,7 @@
     </script>
 }
 
-    <form id="Form1" runat="server">
+    <form id="Form1" >
         <div id="box-agenda">
             <div id="box-filtro">
                 <fieldset class="bloco">
@@ -91,7 +91,7 @@
                         <tr>
                             <td><label>Referência</label></td>
                             <td>
-                                <asp:TextBox ID="DataReferencia" CssClass="data" runat="server" AutoPostBack="true"></asp:TextBox>
+                                <asp:TextBox ID="DataReferencia" CssClass="data"  AutoPostBack="true"></asp:TextBox>
                             </td>
                         </tr>
                     </table>
@@ -102,7 +102,7 @@
                         <tr>
                             <td><label>Grupo</label></td>
                             <td>
-                                <asp:DropDownList ID="Grupo" runat="server" AutoPostBack="True"
+                                <asp:DropDownList ID="Grupo"  AutoPostBack="True"
                                                   ViewStateMode="Enabled" onselectedindexchanged="ListarUsuarios">
                                     <asp:ListItem>BI</asp:ListItem>
                                     <asp:ListItem>MIS-BH</asp:ListItem>
@@ -116,7 +116,7 @@
                         <tr>
                             <td><label>Responsável</label></td>
                             <td>
-                                <asp:DropDownList ID="Responsavel" runat="server" AutoPostBack="True"
+                                <asp:DropDownList ID="Responsavel"  AutoPostBack="True"
                                                   ViewStateMode="Enabled">
                                 </asp:DropDownList>
                             </td>

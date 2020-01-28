@@ -9,5 +9,7 @@ namespace Gadz.Agenda.Access.DomainModel
         string Password { get; }
         string Name { get; }
         IList<IRule> Rules { get; }
+
+        void ResetPassword(string senha);
     }
 }

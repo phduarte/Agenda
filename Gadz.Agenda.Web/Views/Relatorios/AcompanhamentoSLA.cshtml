@@ -18,8 +18,8 @@
     </script>
 }
 
-    <form id="Form1" runat="server">
-        <asp:ScriptManager ID="ScriptManager1" runat="server">
+    <form id="Form1" >
+        <asp:ScriptManager ID="ScriptManager1" >
         </asp:ScriptManager>
         <div id="box-agenda">
             <div id="box-filtro">
@@ -29,13 +29,13 @@
                         <tr>
                             <td><label>De</label></td>
                             <td>
-                                <asp:TextBox ID="txtinicio" CssClass="data" runat="server" AutoPostBack="true"></asp:TextBox>
+                                <asp:TextBox ID="txtinicio" CssClass="data"  AutoPostBack="true"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td><label>Até</label></td>
                             <td>
-                                <asp:TextBox ID="txtFim" CssClass="data" runat="server" AutoPostBack="true"></asp:TextBox>
+                                <asp:TextBox ID="txtFim" CssClass="data"  AutoPostBack="true"></asp:TextBox>
                             </td>
                         </tr>
                     </table>
@@ -46,7 +46,7 @@
                         <tr>
                             <td><label>Cliente</label></td>
                             <td>
-                                <asp:DropDownList ID="cmbCliente" runat="server" AutoPostBack="True"
+                                <asp:DropDownList ID="cmbCliente"  AutoPostBack="True"
                                                   ViewStateMode="Enabled">
                                 </asp:DropDownList>
                             </td>
@@ -54,7 +54,7 @@
                         <tr>
                             <td><label>Responsável</label></td>
                             <td>
-                                <asp:DropDownList ID="cmbResponsavel" runat="server" AutoPostBack="True"
+                                <asp:DropDownList ID="cmbResponsavel"  AutoPostBack="True"
                                                   ViewStateMode="Enabled">
                                 </asp:DropDownList>
                             </td>
@@ -67,14 +67,14 @@
                         <tr>
                             <td><label>Status</label></td>
                             <td>
-                                <asp:DropDownList ID="cmbStatus" runat="server" AutoPostBack="True">
+                                <asp:DropDownList ID="cmbStatus"  AutoPostBack="True">
                                 </asp:DropDownList>
                             </td>
                         </tr>
                         <tr>
                             <td><label>Diagnóstico</label></td>
                             <td>
-                                <asp:DropDownList ID="cmbDiagnostico" runat="server" AutoPostBack="True">
+                                <asp:DropDownList ID="cmbDiagnostico"  AutoPostBack="True">
                                 </asp:DropDownList>
                             </td>
                         </tr>
@@ -86,7 +86,7 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Button ID="Button1" OnClick="Preencher" Text="Atualizar" CssClass="botao" runat="server" />
+                                <asp:Button ID="Button1" OnClick="Preencher" Text="Atualizar" CssClass="botao"  />
                             </td>
                         </tr>
                     </table>
@@ -94,9 +94,9 @@
                 -->
             </div>
             <div id="box-tabela">
-                <asp:UpdatePanel runat="server">
+                <asp:UpdatePanel >
                     <ContentTemplate>
-                        <asp:GridView ID="Tabela" AutoGenerateColumns="False" runat="server"
+                        <asp:GridView ID="Tabela" AutoGenerateColumns="False" 
                                       ForeColor="#333333" GridLines="None"
                                       CellPadding="4">
                             <AlternatingRowStyle BackColor="White" />
@@ -126,6 +126,6 @@
                 </asp:UpdatePanel>
             </div>
         </div>
-        <asp:Timer ID="Timer1" OnTick="Preencher" Interval="60000" runat="server">
+        <asp:Timer ID="Timer1" OnTick="Preencher" Interval="60000" >
         </asp:Timer>
     </form>

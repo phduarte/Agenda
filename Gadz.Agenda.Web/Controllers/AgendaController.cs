@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Gadz.Agenda.Web.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Gadz.Agenda.Controllers
 {
@@ -12,6 +13,17 @@ namespace Gadz.Agenda.Controllers
         public IActionResult Cadastrar()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Cadastrar(AgendamentoModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("index");
+            }
+
+            return View(model);
         }
 
         public IActionResult Pesquisar()

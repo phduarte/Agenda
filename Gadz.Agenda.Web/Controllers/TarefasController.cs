@@ -11,7 +11,8 @@ namespace Gadz.Agenda.Controllers
 
         public IActionResult Cadastrar()
         {
-            return View();
+            var model = new Gadz.Agenda.Web.Models.TarefaModel();
+            return View(model);
         }
 
         public IActionResult Pesquisar()

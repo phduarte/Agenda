@@ -1,48 +1,49 @@
-﻿
+﻿@model NovaSenhaModel
 <div id="box-formulario" class="box-center">
-    <form id="frmFormulario" runat="server">
-        <div id="top">
-            <h5># Alterar senha</h5>
-            <a href="Administracao.aspx" class="fechar"></a>
-        </div><!-- top -->
-        <div id="center">
+    <header class="form-top">
+        <h5>Alterar senha</h5>
+        <a asp-action="administracao" class="fechar"></a>
+    </header>
+    <div class="center">
+        <form method="post" enctype="application/x-www-form-urlencoded">
             <table>
                 <tr>
-                    <td style="width:110px;"><label class="rotulo" for="usuario">Nova Senha</label></td>
+                    <td style="width:110px;">
+                        <label asp-for="Login"></label>
+                    </td>
                     <td>
-                        <input type="password"
-                               id="txtSenha"
-                               value=""
-                               style=" width:100px;"
-                               runat="server" />
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
-                                                    ControlToValidate="txtSenha" ErrorMessage="Obrigatório"></asp:RequiredFieldValidator>
+                        <input asp-for="Login" />
                     </td>
                 </tr>
                 <tr>
-                    <td><label class="rotulo" for="senha">Confirma</label></td>
+                    <td style="width:110px;">
+                        <label asp-for="Senha"></label>
+                    </td>
                     <td>
-                        <input type="password"
-                               id="txtConfirmaSenha"
-                               style=" width:100px;"
-                               runat="server" />
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
-                                                    ControlToValidate="txtConfirmaSenha" ErrorMessage="Obrigatório"></asp:RequiredFieldValidator>
+                        <input asp-for="Senha" />
                     </td>
                 </tr>
                 <tr>
-                    <td><asp:TextBox ID="txtIdUsuario" Visible="false" runat="server"></asp:TextBox></td>
                     <td>
-                        <asp:Button ID="btnEntrar" CssClass="botao" Text="Alterar" OnClick="Alterar" runat="server" />
+                        <label asp-for="NovaSenha"></label>
+                    </td>
+                    <td>
+                        <input asp-for="NovaSenha" />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="submit" class="botao">Alterar</button>
                     </td>
                 </tr>
             </table>
-        </div><!-- center -->
-        <div id="bottom">
-            Sua senha deve conter no máximo 10 caracteres.<br />
-        </div><!-- bottom -->
-    </form>
-</div><!-- box-formulario -->
+        </form>
+    </div>
+    <footer>
+        <div asp-validation-summary="All"></div>
+    </footer>
+</div>
 @section Styles {
     <style type="text/css">
         #content {

@@ -1,37 +1,32 @@
-﻿
-<div id="content">
-    <div id="box-formulario" class="box-center">
-        <form id="frmFormulario" runat="server">
-            <div id="top">
-                <h5># Recuperar senha</h5>
-                <a href="Login.aspx" class="fechar"></a>
-            </div>    <!-- top -->
-            <div id="center">
-                <table>
-                    <tr>
-                        <td style="width:110px;"><label for="txtUsuario" class="rotulo">Usuário</label></td>
-                        <td>
-                            <input type="text"
-                                   id="txtUsuario"
-                                   value=""
-                                   style=" width:100px;"
-                                   runat="server"
-                                   clientidmode="Static" />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
-                                                        ControlToValidate="txtUsuario" ErrorMessage="Obrigatório"></asp:RequiredFieldValidator>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-                            <asp:Button ID="btnEntrar" CssClass="botao" Text="Recuperar" OnClick="Recuperar" runat="server" />
-                        </td>
-                    </tr>
-                </table>
-            </div> <!-- center -->
-            <div id="bottom"></div> <!-- bottom -->
+﻿@model PedidoRecuperacaoSenhaModel
+<div id="box-formulario" class="box-center">
+    <header id="top">
+        <h5>Recuperar senha</h5>
+        <a asp-action="Login" class="fechar"></a>
+    </header>
+    <div id="center">
+        <form method="post" enctype="application/x-www-form-urlencoded">
+            <table>
+                <tr>
+                    <td style="width:110px;">
+                        <label asp-for="Usuario"></label>
+                    </td>
+                    <td>
+                        <input asp-for="Usuario" />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button class="botao">Recuperar</button>
+                    </td>
+                </tr>
+            </table>
         </form>
-    </div><!-- box-formulario -->
+    </div>
+    <footer id="bottom">
+        <div asp-validation-summary="All"></div>
+    </footer>
 </div>
 @section Styles {
     <style type="text/css">

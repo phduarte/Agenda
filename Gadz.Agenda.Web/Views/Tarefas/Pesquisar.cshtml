@@ -5,7 +5,7 @@
         }
     </style>
 }
-<form id="Form1" runat="server">
+<form id="Form1" >
     <div id="box-agenda">
         <div id="box-filtro">
             <fieldset class="bloco">
@@ -30,7 +30,7 @@
                     <tr>
                         <td><label>Responsavel</label></td>
                         <td>
-                            <asp:DropDownList ID="cmbResponsavel" runat="server" AutoPostBack="True"
+                            <asp:DropDownList ID="cmbResponsavel"  AutoPostBack="True"
                                               ViewStateMode="Enabled">
                             </asp:DropDownList>
                         </td>
@@ -41,7 +41,7 @@
         <div id="box-tabela">
             <asp:GridView ID="Tabela"
                           AutoGenerateColumns="False"
-                          runat="server"
+                          
                           ForeColor="#333333"
                           GridLines="None"
                           CellPadding="4">

@@ -29,5 +29,10 @@ namespace Gadz.Agenda.Access.DomainModel
         {
             Rules.Remove(rule);
         }
+
+        public void ResetPassword(string newPassword)
+        {
+            Password = newPassword;
+        }
     }
 }

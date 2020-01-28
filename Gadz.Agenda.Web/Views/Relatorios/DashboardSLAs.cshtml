@@ -25,7 +25,7 @@
     </script>
 }
 
-    <form id="Form1" runat="server">
+    <form id="Form1" >
         <div id="box-agenda" class="box-center">
             <div id="box-filtro">
                 <fieldset class="bloco">
@@ -34,7 +34,7 @@
                         <tr>
                             <td><label>Grupo</label></td>
                             <td>
-                                <asp:DropDownList ID="Grupo" runat="server" AutoPostBack="True"
+                                <asp:DropDownList ID="Grupo"  AutoPostBack="True"
                                                   ViewStateMode="Enabled">
                                 </asp:DropDownList>
                             </td>
@@ -43,7 +43,7 @@
                 </fieldset>
             </div>
             <div id="box-grafico">
-                <asp:Chart ID="Chart1" runat="server" Width="400px" Height="300px">
+                <asp:Chart ID="Chart1"  Width="400px" Height="300px">
                     <legends>
                         <asp:Legend Alignment="Center" Docking="Bottom" IsTextAutoFit="False" Name="Default" LegendStyle="Row" />
                     </legends>
@@ -65,7 +65,7 @@
                         </asp:ChartArea>
                     </ChartAreas>
                 </asp:Chart>
-                <asp:Chart ID="Chart2" runat="server" Width="400px" Height="300px">
+                <asp:Chart ID="Chart2"  Width="400px" Height="300px">
                     <legends>
                         <asp:Legend Alignment="Center" Docking="Bottom" IsTextAutoFit="False" Name="Default" LegendStyle="Row" />
                     </legends>
@@ -85,7 +85,7 @@
                         </asp:ChartArea>
                     </ChartAreas>
                 </asp:Chart>
-                <asp:Chart ID="Chart3" runat="server" Width="800px" Height="290px">
+                <asp:Chart ID="Chart3"  Width="800px" Height="290px">
                     <Titles>
                         <asp:Title Text="Motivos de Atraso"></asp:Title>
                     </Titles>

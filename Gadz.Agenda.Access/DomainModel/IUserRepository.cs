@@ -8,6 +8,8 @@
 
         bool Exist(string username);
 
-        IUser Get(string username, string password);
+        IUser Find(string username, string password);
+        IUser Get(Identity id);
+        void Save(IUser usuario);
     }
 }

@@ -8,7 +8,12 @@ namespace Gadz.Agenda.Web.Controllers
 {
     public class AcessoController : Controller
     {
-        private AccessServices accessServices = new AccessServices();
+        private readonly IAccessServices _accessServices;
+
+        public AcessoController(IAccessServices accessServices)
+        {
+            _accessServices = accessServices;
+        }
 
         public IActionResult Index()
         {
@@ -17,14 +22,14 @@ namespace Gadz.Agenda.Web.Controllers
 
         public IActionResult Login()
         {
-            var c = new Usuario();
+            var c = new Credencial();
             return View(c);
         }
 
         [HttpPost]
         public IActionResult Login(Credencial credencial)
         {
-            var usuario = accessServices.BuscarUsuario(credencial.Login, credencial.Senha);
+            var usuario = _accessServices.BuscarUsuario(credencial.Login, credencial.Senha);
 
             if (usuario != null)
             {
@@ -44,6 +49,31 @@ namespace Gadz.Agenda.Web.Controllers
         public IActionResult AlterarSenha()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult AlterarSenha(NovaSenhaModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var usuario = _accessServices.BuscarUsuario(model.Login, model.Senha);
+
+                if (usuario != null)
+                {
+                    usuario.ResetPassword(model.Senha);
+                    new DefaultHttpContext().Response.Cookies.Append("userId", usuario.Id.ToString(), new CookieOptions() { Expires = DateTimeOffset.Now.AddDays(1) });
+
+                    _accessServices.AtualizarUsuario(usuario);
+
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "User not found");
+                }
+            }
+
+            return View(model);
         }
 
         public IActionResult RecuperarSenha()

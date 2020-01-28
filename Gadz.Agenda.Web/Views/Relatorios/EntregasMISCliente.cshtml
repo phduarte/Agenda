@@ -33,7 +33,7 @@
     </script>
 }
 
-    <form id="form1" runat="server">
+    <form id="form1" >
         <div id="relatorio">
             <div id="box-filtro">
                 <fieldset class="bloco">
@@ -42,7 +42,7 @@
                         <tr>
                             <td><label>Data</label></td>
                             <td>
-                                <asp:TextBox ID="Data" CssClass="data" runat="server" AutoPostBack="true"></asp:TextBox>
+                                <asp:TextBox ID="Data" CssClass="data"  AutoPostBack="true"></asp:TextBox>
                             </td>
                         </tr>
                     </table>
@@ -53,7 +53,7 @@
                         <tr>
                             <td><label>Grupo</label></td>
                             <td>
-                                <asp:DropDownList ID="Grupo" runat="server" AutoPostBack="True"
+                                <asp:DropDownList ID="Grupo"  AutoPostBack="True"
                                                   ViewStateMode="Enabled">
                                 </asp:DropDownList>
                             </td>
@@ -62,7 +62,7 @@
                 </fieldset>
             </div>
             <div>
-                <asp:GridView ID="Tabela" AutoGenerateColumns="False" runat="server" ForeColor="#333333" GridLines="None" CellPadding="4">
+                <asp:GridView ID="Tabela" AutoGenerateColumns="False"  ForeColor="#333333" GridLines="None" CellPadding="4">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:BoundField HeaderText="Cliente" DataField="cliente" ItemStyle-HorizontalAlign="Center" ItemStyle-Width="300" />
@@ -86,7 +86,7 @@
                 </asp:GridView>
             </div>
             <div>
-                <asp:GridView ID="Tabela2" AutoGenerateColumns="False" runat="server" ForeColor="#333333" GridLines="None" CellPadding="4">
+                <asp:GridView ID="Tabela2" AutoGenerateColumns="False"  ForeColor="#333333" GridLines="None" CellPadding="4">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:BoundField HeaderText="Responsável" DataField="responsavel" ItemStyle-HorizontalAlign="Center" ItemStyle-Width="300" />

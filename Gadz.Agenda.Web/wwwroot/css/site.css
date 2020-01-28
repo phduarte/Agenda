@@ -1,5 +1,6 @@
 ﻿body{
-    background-color: #1e1d1d
+    background-color: #1e1d1d;
+    background-color: #fff;
 }
 
 main {
@@ -7,6 +8,7 @@ main {
     clear: both;
     min-height: 350px;
     background-color: #1e1d1d;
+    background-color: #fff;
     border-top: 1px solid #FFF;
     overflow: auto;
 }
@@ -44,7 +46,7 @@ main {
     width: 102px;
     height: 25px;
     vertical-align: middle;
-    background-image: url('../images/bg/bg_botao.png');
+    /*background-image: url('../images/bg/bg_botao.png');*/
 }
 
 .fechar {
