@@ -1,6 +1,6 @@
 ﻿namespace Gadz.Agenda.Web.Models
 {
-    public class Usuario : Entidade, ICredencial
+    public class Usuario : Entidade
     {
         public string Nome { get; private set; }
         public string Login { get; set; }

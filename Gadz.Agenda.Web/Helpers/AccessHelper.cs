@@ -5,7 +5,7 @@ namespace Gadz.Agenda.Helpers
 {
     public class AccessHelper
     {
-        public static ICredencial GetCredencial(string id)
+        public static Credencial GetCredencial(string id)
         {
             var cookie = new DefaultHttpContext().Request.Cookies["userId"];
 
