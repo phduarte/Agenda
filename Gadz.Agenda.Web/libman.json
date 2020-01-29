@@ -7,17 +7,22 @@
       "destination": "wwwroot/lib/jquery/"
     },
     {
-      "provider": "unpkg",
-      "library": "bootstrap@3.3.7",
+      "library": "twitter-bootstrap@4.4.1",
       "files": [
-        "dist/css/bootstrap.css",
-        "dist/css/bootstrap.css.map",
-        "dist/css/bootstrap.min.css",
-        "dist/css/bootstrap.min.css.map",
-        "dist/js/bootstrap.js",
-        "dist/js/bootstrap.min.js"
+        "css/bootstrap.css.map",
+        "css/bootstrap.min.css",
+        "css/bootstrap.min.css.map",
+        "js/bootstrap.min.js"
       ],
       "destination": "wwwroot/lib/bootstrap/"
+    },
+    {
+      "library": "jqueryui@1.12.1",
+      "files": [
+        "jquery-ui.min.css",
+        "jquery-ui.min.js"
+      ],
+      "destination": "wwwroot/lib/jquery-ui/"
     },
     {
       "library": "jquery-validation-unobtrusive@3.2.10",
@@ -30,6 +35,10 @@
         "jquery.validate.min.js",
         "jquery.validate.js"
       ]
+    },
+    {
+      "library": "jquery.maskedinput@1.4.1",
+      "destination": "wwwroot/lib/jquery-maskedinput"
     }
   ]
 }
