@@ -14,9 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Gadz.Agenda.Access\Gadz.Agenda.Access.csproj" />
     <ProjectReference Include="..\Gadz\Gadz.csproj" />
     <ProjectReference Include="..\Gadz.Agenda\Gadz.Agenda.csproj" />
+    <ProjectReference Include="..\Gadz.Agenda.Access\Gadz.Agenda.Access.csproj" />
   </ItemGroup>
 
 </Project>
