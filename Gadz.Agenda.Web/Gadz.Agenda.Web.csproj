@@ -5,7 +5,35 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\lib\bootstrap\**" />
+    <Compile Remove="wwwroot\lib\jquery-ui\**" />
+    <Compile Remove="wwwroot\lib\jquery.maskedinput\**" />
+    <Compile Remove="wwwroot\lib\jquery.tablesorter\**" />
+    <Compile Remove="wwwroot\lib\jquery\**" />
+    <Compile Remove="wwwroot\lib\shadownbox\**" />
+    <Content Remove="wwwroot\lib\bootstrap\**" />
+    <Content Remove="wwwroot\lib\jquery-ui\**" />
+    <Content Remove="wwwroot\lib\jquery.maskedinput\**" />
+    <Content Remove="wwwroot\lib\jquery.tablesorter\**" />
+    <Content Remove="wwwroot\lib\jquery\**" />
+    <Content Remove="wwwroot\lib\shadownbox\**" />
+    <EmbeddedResource Remove="wwwroot\lib\bootstrap\**" />
+    <EmbeddedResource Remove="wwwroot\lib\jquery-ui\**" />
+    <EmbeddedResource Remove="wwwroot\lib\jquery.maskedinput\**" />
+    <EmbeddedResource Remove="wwwroot\lib\jquery.tablesorter\**" />
+    <EmbeddedResource Remove="wwwroot\lib\jquery\**" />
+    <EmbeddedResource Remove="wwwroot\lib\shadownbox\**" />
+    <None Remove="wwwroot\lib\bootstrap\**" />
+    <None Remove="wwwroot\lib\jquery-ui\**" />
+    <None Remove="wwwroot\lib\jquery.maskedinput\**" />
+    <None Remove="wwwroot\lib\jquery.tablesorter\**" />
+    <None Remove="wwwroot\lib\jquery\**" />
+    <None Remove="wwwroot\lib\shadownbox\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 
   <ItemGroup>

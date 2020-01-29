@@ -6,6 +6,7 @@
     "bootstrap": "*",
     "jquery.maskedinput": "1.4.1",
     "jquery-ui": "1.12.1",
-    "jquery.tablesorter": "2.29.4"
+    "jquery.tablesorter": "2.29.4",
+    "Shadowbox.js": "*"
   }
 }
