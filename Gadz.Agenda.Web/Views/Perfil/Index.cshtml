@@ -1,0 +1,71 @@
+﻿@model PerfilModel
+<div class="box-formulario box-center">
+    <header>
+        <h5>Perfil</h5>
+        <a asp-action="index" asp-controller="home" class="fechar" title="fechar"></a>
+    </header>
+    <form method="post" enctype="application/x-www-form-urlencoded">
+        <table>
+            <tr>
+                <td class="style2">
+                    <label asp-for="Nome"></label>
+                </td>
+                <td class="style1">
+                    <input asp-for="Nome" />
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    <label asp-for="Email"></label>
+                </td>
+                <td class="style1">
+                    <input asp-for="Email" />
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    <label asp-for="Login"></label>
+                </td>
+                <td class="style1">
+                    <input asp-for="Login" />
+                </td>
+            </tr>
+            <tr>
+                <td class="style2"></td>
+                <td class="style1">
+                    <button class="botao">Salvar</button>
+                </td>
+            </tr>
+        </table>
+        @Html.HiddenFor(x => x.Id)
+    </form>
+    <footer>
+        <div asp-validation-summary="All"></div>
+    </footer>
+</div>
+@section Styles {
+    <link href="~/css/forms.css" rel="stylesheet" />
+    <style type="text/css">
+        #box-formulario {
+            width: 500px;
+        }
+
+        .style1 {
+            width: 330px;
+        }
+
+        .style2 {
+            width: 93px;
+        }
+    </style>
+}
+
+@section Scripts {
+
+    <script type="text/javascript">
+        $(function () {
+            $(".data").datepicker();
+            $(".data").mask("99/99/9999");
+        });
+    </script>
+}
