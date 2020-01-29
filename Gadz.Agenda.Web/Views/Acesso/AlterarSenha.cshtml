@@ -1,57 +1,52 @@
 ﻿@model NovaSenhaModel
-<div id="box-formulario" class="box-center">
-    <header class="form-top">
+<div class="box-formulario box-center" style="width: 350px">
+    <header>
         <h5>Alterar senha</h5>
         <a asp-action="administracao" class="fechar"></a>
     </header>
-    <div class="center">
-        <form method="post" enctype="application/x-www-form-urlencoded">
-            <table>
-                <tr>
-                    <td style="width:110px;">
-                        <label asp-for="Login"></label>
-                    </td>
-                    <td>
-                        <input asp-for="Login" />
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width:110px;">
-                        <label asp-for="Senha"></label>
-                    </td>
-                    <td>
-                        <input asp-for="Senha" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label asp-for="NovaSenha"></label>
-                    </td>
-                    <td>
-                        <input asp-for="NovaSenha" />
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <button type="submit" class="botao">Alterar</button>
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </div>
+    <form method="post" enctype="application/x-www-form-urlencoded">
+        <table>
+            <tr>
+                <td style="width:110px;">
+                    <label asp-for="Login"></label>
+                </td>
+                <td>
+                    <input asp-for="Login" />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:110px;">
+                    <label asp-for="Senha"></label>
+                </td>
+                <td>
+                    <input asp-for="Senha" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="NovaSenha"></label>
+                </td>
+                <td>
+                    <input asp-for="NovaSenha" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit" class="botao">Alterar</button>
+                </td>
+            </tr>
+        </table>
+    </form>
     <footer>
         <div asp-validation-summary="All"></div>
     </footer>
 </div>
 @section Styles {
+    <link href="~/css/forms.css" rel="stylesheet" />
     <style type="text/css">
         #content {
             background-color: #FFF;
-        }
-
-        #box-formulario {
-            width: 350px;
         }
     </style>
 }
