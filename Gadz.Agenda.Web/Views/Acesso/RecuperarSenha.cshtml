@@ -1,41 +1,36 @@
 ﻿@model PedidoRecuperacaoSenhaModel
-<div id="box-formulario" class="box-center">
-    <header id="top">
+<div class="box-formulario box-center" style="width: 350px">
+    <header>
         <h5>Recuperar senha</h5>
         <a asp-action="Login" class="fechar"></a>
     </header>
-    <div id="center">
-        <form method="post" enctype="application/x-www-form-urlencoded">
-            <table>
-                <tr>
-                    <td style="width:110px;">
-                        <label asp-for="Usuario"></label>
-                    </td>
-                    <td>
-                        <input asp-for="Usuario" />
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <button class="botao">Recuperar</button>
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </div>
-    <footer id="bottom">
+    <form method="post" enctype="application/x-www-form-urlencoded">
+        <table>
+            <tr>
+                <td style="width:110px;">
+                    <label asp-for="Usuario"></label>
+                </td>
+                <td>
+                    <input asp-for="Usuario" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button class="botao">Recuperar</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <footer>
         <div asp-validation-summary="All"></div>
     </footer>
 </div>
 @section Styles {
+    <link href="~/css/forms.css" rel="stylesheet" />
     <style type="text/css">
         #content {
             background-color: #FFF;
-        }
-
-        #box-formulario {
-            width: 350px;
         }
     </style>
 }

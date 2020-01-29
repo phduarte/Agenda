@@ -1,70 +1,69 @@
 ﻿@model TratamentoModel
-<div id="box-formulario" class="box-center">
-    <header id="top">
+<div class="box-formulario box-center">
+    <header>
         <h5>Tratamento</h5>
         <a asp-action="index" class="fechar"></a>
     </header>
-    <div id="center">
-        <form id="form1">
-            <table>
-                <tr>
-                    <td class="style6">
-                        <label asp-for="Prazo"></label>
-                    </td>
-                    <td class="style7">
-                        <input asp-for="Prazo" />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="style6">
-                        <label asp-for="DataEnvio"></label>
-                    </td>
-                    <td class="style7">
-                        <input asp-for="DataEnvio" />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="style6">
-                        <label asp-for="Status"></label>
-                    </td>
-                    <td class="style1">
-                        <select asp-for="Status" asp-items="Html.GetEnumSelectList<StatusTratamento>()"></select>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="style6">
-                        <label asp-for="Diagnostico"></label>
-                    </td>
-                    <td class="style1">
-                        <select asp-for="Diagnostico" asp-items="DefaultValues.Diagnosticos"></select>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="style6">
-                        <label asp-for="Observacao"></label>
-                    </td>
-                    <td class="style1">
-                        <input asp-for="Observacao" />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="style6">
-                        <input asp-for="Id" type="hidden" />
-                    </td>
-                    <td class="style4">
-                        <button class="botao">Salvar</button>
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </div>
+    <form>
+        <table>
+            <tr>
+                <td class="style6">
+                    <label asp-for="Prazo"></label>
+                </td>
+                <td class="style7">
+                    <input asp-for="Prazo" />
+                </td>
+            </tr>
+            <tr>
+                <td class="style6">
+                    <label asp-for="DataEnvio"></label>
+                </td>
+                <td class="style7">
+                    <input asp-for="DataEnvio" />
+                </td>
+            </tr>
+            <tr>
+                <td class="style6">
+                    <label asp-for="Status"></label>
+                </td>
+                <td class="style1">
+                    <select asp-for="Status" asp-items="Html.GetEnumSelectList<StatusTratamento>()"></select>
+                </td>
+            </tr>
+            <tr>
+                <td class="style6">
+                    <label asp-for="Diagnostico"></label>
+                </td>
+                <td class="style1">
+                    <select asp-for="Diagnostico" asp-items="DefaultValues.Diagnosticos"></select>
+                </td>
+            </tr>
+            <tr>
+                <td class="style6">
+                    <label asp-for="Observacao"></label>
+                </td>
+                <td class="style1">
+                    <input asp-for="Observacao" />
+                </td>
+            </tr>
+            <tr>
+                <td class="style6">
+                    <input asp-for="Id" type="hidden" />
+                </td>
+                <td class="style4">
+                    <button class="botao">Salvar</button>
+                </td>
+            </tr>
+        </table>
+    </form>
     <footer>
         <div asp-validation-summary="All"></div>
     </footer>
 </div>
 @section Styles {
+    <link href="~/css/forms.css" rel="stylesheet" />
     <style type="text/css">
-        #box-formulario {
+        .box-formulario {
             width: 450px;
         }
 

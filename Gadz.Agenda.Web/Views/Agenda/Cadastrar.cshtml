@@ -1,159 +1,160 @@
 ﻿@model AgendamentoModel
-<div id="box-formulario" class="box-center">
-    <header id="top">
+<div class="box-formulario box-center">
+    <header>
         <h5>Agendamento</h5>
         <a asp-action="index" class="fechar" title="fechar"></a>
-    </header><!-- top -->
-    <div id="center">
-        <form method="post" enctype="application/x-www-form-urlencoded">
-            <table>
-                <tr>
-                    <td class="style2">
-                        <label asp-for="Tarefa"></label>
-                    </td>
-                    <td class="style1">
-                        <select asp-for="Tarefa" asp-items="Tarefas.Lista"></select>
+    </header>
+    <form method="post" enctype="application/x-www-form-urlencoded">
+        <table>
+            <tr>
+                <td class="style2">
+                    <label asp-for="Tarefa"></label>
+                </td>
+                <td class="style1">
+                    <select asp-for="Tarefa" asp-items="Tarefas.Lista"></select>
 
-                    </td>
-                </tr>
-                <tr>
-                    <td class="style2">
-                        <label asp-for="Cliente"></label>
-                    </td>
-                    <td class="style1">
-                        <select asp-for="Cliente" asp-items="Clientes.Lista"></select>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="style2">
-                        <label asp-for="Responsavel"></label>
-                    </td>
-                    <td class="style1">
-                        <select ID="Responsavel" BackColor="#FFFFCC"
-                                Height="20px" Width="192px">
-                            <option Text="Paulo Duarte" Value="0"></option>
-                            <option Text="Presley Brenner" Value="1"></option>
-                            <option Text="Davidson Godinho" Value="2"></option>
-                            <option Text="Pablo Dias" Value="3"></option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="style2">
-                        <label asp-for="DataInicio"></label>
-                    </td>
-                    <td class="style1">
-                        <input asp-for="DataInicio" class="data" />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="style2">
-                        <label asp-for="DataFim"></label>
-                    </td>
-                    <td class="style1">
-                        <input asp-for="DataFim" class="data" />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="style2">
-                        <label class="rotulo">Duração</label>
-                    </td>
-                    <td class="style1">
-                        <select name="DuracaoHoras">
-                            <option value="0" selected>00</option>
-                            <option Text="01" Value="1"></option>
-                            <option Text="02" Value="2"></option>
-                            <option Text="03" Value="3"></option>
-                            <option Text="04" Value="4"></option>
-                            <option Text="05" Value="5"></option>
-                            <option Text="06" Value="6"></option>
-                        </select>
-                        <select name="DuracaoMinutos">
-                            <option Text="00" Value="0"></option>
-                            <option Text="10" Value="10"></option>
-                            <option Text="15" Value="15" selected></option>
-                            <option Text="20" Value="20"></option>
-                            <option Text="25" Value="25"></option>
-                            <option Text="30" Value="30"></option>
-                            <option Text="35" Value="35"></option>
-                            <option Text="40" Value="40"></option>
-                            <option Text="45" Value="45"></option>
-                            <option Text="50" Value="50"></option>
-                            <option Text="55" Value="55"></option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="style2">
-                        <label class="rotulo">Prazo</label>
-                    </td>
-                    <td class="style1">
-                        <select name="PrazoHora">
-                            <option value="07">07</option>
-                            <option value="08" Selected>08</option>
-                            <option value="09">09</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                        </select>
-                        <select name="PrazoMinutos">
-                            <option value="00" Selected>00</option>
-                            <option value="15">15</option>
-                            <option value="30">30</option>
-                            <option value="45">45</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="style2">
-                        <label asp-for="Tipo"></label>
-                    </td>
-                    <td class="style1">
-                        <select name="tipo">
-                            <option value="1">Diário</option>
-                            <option value="2">Semanal</option>
-                            <option value="3">Mensal</option>
-                            <option value="4" selected>Eventual</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="style2">
-                        <label asp-for="Substituicao"></label>
-                    </td>
-                    <td class="style1">
-                        <select ID="Substituicao" Width="360px">
-                            <option Value="1" Text="Excluir todos os agendamentos não tratados desta tarefa"></option>
-                            <option Value="2" Text="Excluir todos os agendamentos desta tarefa"></option>
-                            <option Value="0" Text="Não excluir nenhum agendamento" Selected="True"></option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="style2">
-                        <label asp-for="Motivo"></label>
-                    </td>
-                    <td class="style1">
-                        <textarea name="Motivo" maxlength="400"
-                                  placeholder="Descreva o motivo do agendamento, seja o mais objetivo possível."></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="style2"></td>
-                    <td class="style1">
-                        <button class="botao">Salvar</button>
-                    </td>
-                </tr>
-            </table>
-            @Html.HiddenFor(x => x.Id)
-        </form>
-    </div><!-- center -->
-    <footer id="bottom">
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    <label asp-for="Cliente"></label>
+                </td>
+                <td class="style1">
+                    <select asp-for="Cliente" asp-items="Clientes.Lista"></select>
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    <label asp-for="Responsavel"></label>
+                </td>
+                <td class="style1">
+                    <select ID="Responsavel" BackColor="#FFFFCC"
+                            Height="20px" Width="192px">
+                        <option Text="Paulo Duarte" Value="0"></option>
+                        <option Text="Presley Brenner" Value="1"></option>
+                        <option Text="Davidson Godinho" Value="2"></option>
+                        <option Text="Pablo Dias" Value="3"></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    <label asp-for="DataInicio"></label>
+                </td>
+                <td class="style1">
+                    <input asp-for="DataInicio" class="data" />
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    <label asp-for="DataFim"></label>
+                </td>
+                <td class="style1">
+                    <input asp-for="DataFim" class="data" />
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    <label class="rotulo">Duração</label>
+                </td>
+                <td class="style1">
+                    <select name="DuracaoHoras">
+                        <option value="0" selected>00</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                    </select>
+                    <select name="DuracaoMinutos">
+                        <option value="0">00</option>
+                        <option value="10">10</option>
+                        <option value="15" selected>15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                        <option value="35">35</option>
+                        <option value="40">40</option>
+                        <option value="45">45</option>
+                        <option value="50">50</option>
+                        <option value="55">55</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    <label class="rotulo">Prazo</label>
+                </td>
+                <td class="style1">
+                    <select name="PrazoHora">
+                        <option value="07">07</option>
+                        <option value="08" Selected>08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <select name="PrazoMinutos">
+                        <option value="00" Selected>00</option>
+                        <option value="15">15</option>
+                        <option value="30">30</option>
+                        <option value="45">45</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    <label asp-for="Tipo"></label>
+                </td>
+                <td class="style1">
+                    <select name="tipo">
+                        <option value="1">Diário</option>
+                        <option value="2">Semanal</option>
+                        <option value="3">Mensal</option>
+                        <option value="4" selected>Eventual</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    <label asp-for="Substituicao"></label>
+                </td>
+                <td class="style1">
+                    <select ID="Substituicao" Width="360px">
+                        <option Value="1" Text="Excluir todos os agendamentos não tratados desta tarefa"></option>
+                        <option Value="2" Text="Excluir todos os agendamentos desta tarefa"></option>
+                        <option Value="0" Text="Não excluir nenhum agendamento" selected></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    <label asp-for="Motivo"></label>
+                </td>
+                <td class="style1">
+                    <textarea name="Motivo" maxlength="400"
+                              placeholder="Descreva o motivo do agendamento, seja o mais objetivo possível."></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class="style2"></td>
+                <td class="style1">
+                    <button class="botao">Salvar</button>
+                </td>
+            </tr>
+        </table>
+        @Html.HiddenFor(x => x.Id)
+    </form>
+    <footer>
         <div asp-validation-summary="All"></div>
-        Atenção: O prazo para alterar os dados deste agendamento é de até 1 hora após o vencimento da SLA. Vencido esse prazo a demanda não poderá mais ser alterada.
+        <p>
+            Atenção: O prazo para alterar os dados deste agendamento é de até 1 hora após o vencimento da SLA. Vencido esse prazo a demanda não poderá mais ser alterada.
+        </p>
     </footer><!-- bottom -->
 </div>
 @section Styles {
+    <link href="~/css/forms.css" rel="stylesheet" />
     <style type="text/css">
         #box-formulario {
             width: 500px;

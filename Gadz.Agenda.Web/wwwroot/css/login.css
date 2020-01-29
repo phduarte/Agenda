@@ -1,11 +1,11 @@
-﻿#box-login {
+﻿.box-login {
     width: 948px;
     height: 400px;
     margin: 0 auto;
     background-color: #FFF;
 }
 
-    #box-login .logo {
+    .box-login .logo {
         position: relative;
         width: 320px;
         height: 132px;
@@ -14,18 +14,18 @@
         margin: auto;
     }
 
-    #box-login .caracteristicas {
+    .box-login .caracteristicas {
         position: relative;
         top: 10px;
         margin-right: 20px;
     }
 
-        #box-login .caracteristicas ul {
+        .box-login .caracteristicas ul {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 11px;
         }
 
-        #box-login .caracteristicas li {
+        .box-login .caracteristicas li {
             list-style-image: url(img/controls/arrow.gif);
             float: right;
             clear: right;
@@ -33,7 +33,7 @@
             line-height: 20px;
         }
 
-    #box-login .box_login {
+    .box-login .box_login {
         float: left;
         width: 379px;
         height: 320px;
@@ -44,20 +44,20 @@
     background-color: #FFF;
 }
 
-#box-login {
+.box-login {
     width: 948px;
     height: 400px;
     margin: 0 auto;
 }
 
-    #box-login .box_login {
+    .box-login .box_login {
         float: left;
         width: 379px;
         height: 320px;
         margin: 40px;
     }
 
-    #box-login .top {
+    .box-login .top {
         background-color: #FEFEFE;
         height: 85px;
         margin-bottom: 0px;
@@ -66,18 +66,18 @@
         color: #CCC;
     }
 
-    #box-login .center {
+    .box-login .center {
         background-color: #FFFFFF;
         height: 150px;
         margin-bottom: 0px;
         color: #999;
     }
 
-        #box-login .center label {
+        .box-login .center label {
             float: right;
         }
 
-        #box-login .center table {
+        .box-login .center table {
             width: 100%;
         }
 

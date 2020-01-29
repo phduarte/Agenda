@@ -1,6 +1,6 @@
 ﻿@model Credencial
 
-<div id="box-login" class="box-center">
+<div class="box-login box-center">
     <div class="box_login">
         <img src="@Url.Content("~/images/bg/logo.png")" class="logo" alt="" />
         <div class="caracteristicas">
@@ -11,39 +11,37 @@
             </ul>
         </div>
     </div>
-    <div class="box_login" style=" border:1px solid #F8F8F8;">
-        <header class="top">
+    <div class="box_login box-formulario">
+        <header>
             <h5>Acesso</h5>
         </header>
-        <div class="center">
-            <form method="post" enctype="application/x-www-form-urlencoded">
-                <table>
-                    <tr>
-                        <td style="width:110px;">
-                            <label asp-for="Login"></label>
-                        </td>
-                        <td>
-                            <input asp-for="Login" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label asp-for="Senha"></label>
-                        </td>
-                        <td>
-                            <input asp-for="Senha" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-                            <button class="botao">Entrar</button>
-                        </td>
-                    </tr>
-                </table>
-            </form>
-        </div>
-        <footer class="bottom">
+        <form method="post" enctype="application/x-www-form-urlencoded">
+            <table>
+                <tr>
+                    <td style="width:110px;">
+                        <label asp-for="Login"></label>
+                    </td>
+                    <td>
+                        <input asp-for="Login" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label asp-for="Senha"></label>
+                    </td>
+                    <td>
+                        <input asp-for="Senha" />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button class="botao">Entrar</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <footer>
             <div asp-validation-summary="All"></div>
             <p>Para acessar utilize o usuário e senha da rede.<br />Certifique-se de que sua senha não esteja expirada.</p>
         </footer>
@@ -51,5 +49,6 @@
 </div>
 
 @section Styles {
+    <link href="~/css/forms.css" rel="stylesheet" />
     <link href="~/css/login.css" rel="stylesheet" />
 }

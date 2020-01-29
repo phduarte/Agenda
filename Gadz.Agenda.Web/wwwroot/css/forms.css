@@ -1,27 +1,27 @@
-﻿#box-formulario {
+﻿.box-formulario {
     margin: 0 auto;
     background-color: #FFF;
     border: 1px solid #F3F3F3;
     max-width: 600px;
 }
 
-    #box-formulario table {
+    .box-formulario table {
         border-style: none;
         border-color: inherit;
         border-width: medium;
         border-collapse: collapse;
     }
 
-    #box-formulario select, #box-formulario input[type=text], #box-formulario input[type=password] {
+    .box-formulario select, .box-formulario input[type=text], .box-formulario input[type=password] {
         padding: 1px;
         border: 1px solid #CCC;
     }
 
-    #box-formulario textarea {
+    .box-formulario textarea {
         border: 1px solid #CCC;
     }
 
-    #box-formulario #top {
+    .box-formulario > header {
         background-color: #FEFEFE;
         height: 85px;
         margin-bottom: 0px;
@@ -30,7 +30,7 @@
         color: #CCC;
     }
 
-        #box-formulario #top h5 {
+        .box-formulario > header h5 {
             float: left;
             color: #999;
             margin-left: 20px;
@@ -39,27 +39,25 @@
             width: 80%;
         }
 
-    #box-formulario #center {
+    .box-formulario form {
         background-color: #FFFFFF;
         margin-bottom: 0px;
         color: #999;
     }
 
-    #box-formulario label {
+    .box-formulario label {
         margin: 5px;
-    }
-
-    #box-formulario .rotulo {
         float: right;
+        text-align: right;
         margin: 0px;
     }
 
-    #box-formulario #center table td {
+    .box-formulario form table td {
         border: 1px solid #FEFEFE;
         padding: 5px;
     }
 
-    #box-formulario #bottom {
+    .box-formulario > footer {
         background-color: #F8F8F8;
         height: 85px;
         margin-bottom: 0px;
@@ -68,7 +66,7 @@
         text-indent: 20px;
     }
 
-    #box-formulario .botao {
+    .box-formulario .botao {
         margin: 5px 5px 5px 0px;
         cursor: pointer;
     }

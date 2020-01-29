@@ -1,7 +1,8 @@
 ﻿@model TarefaModel
 @section Styles{
+    <link href="~/css/forms.css" rel="stylesheet" />
     <style type="text/css">
-        #box-formulario {
+        .box-formulario {
             width: 470px;
         }
 
@@ -27,62 +28,60 @@
     </script>
 }
 
-<div id="box-formulario" class="box-center">
-    <header id="top">
+<div class="box-formulario box-center">
+    <header>
         <h5>Tarefa</h5>
         <a asp-action="index" class="fechar"></a>
     </header>
-    <div id="center">
-        <form id="form1">
-            <table>
-                <tr>
-                    <td class="style2">
-                        <label asp-for="Nome"></label>
-                    </td>
-                    <td class="style1">
-                        <input asp-for="Nome" />
-                        <span asp-validation-for="Nome"></span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="style2">
-                        <label asp-for="DataSolicitacao"></label>
-                    </td>
-                    <td class="style1">
-                        <input asp-for="DataSolicitacao" />
-                        <span asp-validation-for="DataSolicitacao"></span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="style2">
-                        <label asp-for="Grupo"></label>
-                    </td>
-                    <td class="style1">
-                        <select asp-for="Grupo"></select>
-                        <span asp-validation-for="Grupo"></span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="style2">
-                        <label asp-for="Observacao"></label>
-                    </td>
-                    <td class="style1">
-                        <textarea asp-for="Observacao"></textarea>
-                        <span asp-validation-for="Observacao"></span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="style2">
-                        <input type="hidden" asp-for="Id" />
-                    </td>
-                    <td class="style4">
-                        <button class="botao">Salvar</button>
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </div><!-- center -->
-    <footer id="bottom">
+    <form method="post" enctype="application/x-www-form-urlencoded">
+        <table>
+            <tr>
+                <td class="style2">
+                    <label asp-for="Nome"></label>
+                </td>
+                <td class="style1">
+                    <input asp-for="Nome" />
+                    <span asp-validation-for="Nome"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    <label asp-for="DataSolicitacao"></label>
+                </td>
+                <td class="style1">
+                    <input asp-for="DataSolicitacao" />
+                    <span asp-validation-for="DataSolicitacao"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    <label asp-for="Grupo"></label>
+                </td>
+                <td class="style1">
+                    <select asp-for="Grupo"></select>
+                    <span asp-validation-for="Grupo"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    <label asp-for="Observacao"></label>
+                </td>
+                <td class="style1">
+                    <textarea asp-for="Observacao"></textarea>
+                    <span asp-validation-for="Observacao"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    <input type="hidden" asp-for="Id" />
+                </td>
+                <td class="style4">
+                    <button class="botao">Salvar</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <footer>
         <div asp-validation-summary="All"></div>
     </footer>
 </div>
