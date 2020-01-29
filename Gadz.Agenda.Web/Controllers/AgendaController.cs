@@ -1,14 +1,18 @@
-﻿using Gadz.Agenda.Web.Models;
+﻿using Gadz.Agenda.Web.Filters;
+using Gadz.Agenda.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Gadz.Agenda.Controllers
 {
     public class AgendaController : Controller
     {
+        [Breadcrumb("Agenda")]
         public IActionResult Index()
         {
             return View();
         }
+
+        [Breadcrumb("Cadastrar")]
 
         public IActionResult Cadastrar()
         {
@@ -26,16 +30,13 @@ namespace Gadz.Agenda.Controllers
             return View(model);
         }
 
-        public IActionResult Pesquisar()
-        {
-            return View();
-        }
-
+        [Breadcrumb("Resumo")]
         public IActionResult Resumo()
         {
             return View();
         }
 
+        [Breadcrumb("Tratamento")]
         public IActionResult Tratamento()
         {
             return View();

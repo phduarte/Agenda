@@ -1,5 +1,5 @@
-﻿using Gadz.Agenda.Access;
-using Gadz.Agenda.DomainModel;
+﻿using Gadz.Agenda.DomainModel;
+using Gadz.Agenda.Web.Filters;
 using Gadz.Agenda.Web.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -16,6 +16,7 @@ namespace Gadz.Agenda.Web.Controllers
             _userServices = userServices;
         }
 
+        [Breadcrumb("Acesso")]
         public IActionResult Index()
         {
             return View();
