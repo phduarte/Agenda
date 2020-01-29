@@ -1,8 +1,15 @@
-﻿<!DOCTYPE html>
+﻿@{
+    string title = "Agenda";
+    if (ViewData.ContainsKey("title"))
+    {
+        title = ViewData["title"].ToString();
+    }
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Agenda - @ViewBag.Title</title>
+    <title>@title</title>
     <link href="~/css/reset.css" rel="stylesheet" />
     <link href="~/css/site.css" rel="stylesheet" />
     <link href="~/css/header.css" rel="stylesheet" />

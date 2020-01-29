@@ -5,13 +5,13 @@ namespace Gadz.Agenda.Web.Controllers
 {
     public class UsuariosController : Controller
     {
-        [Breadcrumb("Usuários")]
+        [Breadcrumb("Usuários"), Title("Usuários")]
         public IActionResult Index()
         {
             return View();
         }
 
-        [Breadcrumb("Cadastrar")]
+        [Breadcrumb("Cadastrar"), Title("Cadastro de usuários")]
         public IActionResult Cadastrar()
         {
             return View();

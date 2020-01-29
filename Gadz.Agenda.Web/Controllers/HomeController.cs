@@ -5,13 +5,13 @@ namespace Gadz.Agenda.Web.Controllers
 {
     public class HomeController : Controller
     {
-        [Breadcrumb("Bem vindo ao Agenda")]
+        [Breadcrumb("Bem vindo ao Agenda"), Title("Agenda")]
         public IActionResult Index()
         {
             return View();
         }
 
-        [Breadcrumb("Versões")]
+        [Breadcrumb("Versões"), Title("Versões")]
         public IActionResult Versoes()
         {
             return View();

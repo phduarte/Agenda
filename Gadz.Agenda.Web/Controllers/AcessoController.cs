@@ -22,6 +22,7 @@ namespace Gadz.Agenda.Web.Controllers
             return View();
         }
 
+        [Title("Login")]
         public IActionResult Login()
         {
             var c = new Credencial();
@@ -42,7 +43,7 @@ namespace Gadz.Agenda.Web.Controllers
 
             return View(credencial);
         }
-
+       
         public IActionResult Logout()
         {
             return RedirectToAction("Index", "Home");

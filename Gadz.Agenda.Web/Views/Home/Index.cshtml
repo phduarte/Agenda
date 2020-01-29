@@ -1,36 +1,34 @@
-﻿@{
-    ViewBag.Title = "Hello!";
-}
-    <div class="mainbox box-center">
-        <div>
-            <a asp-action="index" asp-controller="agenda">
-                <img src="~/images/icons/calendar.png" alt="" />
-                <h5>Agenda</h5>
-                <p>Gerenciamento das tarefas agendadas.</p>
-            </a>
-        </div>
-        <div>
-            <a asp-action="index" asp-controller="relatorios">
-                <img src="~/images/icons/char_lines.png" alt="" />
-                <h5>Relatórios</h5>
-                <p>Acompanhe as estatísticas de produtividade do seu time.</p>
-            </a>
-        </div>
-        <div>
-            <a asp-action="index" asp-controller="tarefas">
-                <img src="~/images/icons/book_anotation.png" alt="" />
-                <h5>Tarefas</h5>
-                <p>As tarefas que você deseja controlar</p>
-            </a>
-        </div>
-        <div>
-            <a asp-action="index" asp-controller="usuarios">
-                <img src="~/images/icons/user%20(3).png" alt="" />
-                <h5>Usuários</h5>
-                <p>Lista de usuários.</p>
-            </a>
-        </div>
+﻿
+<div class="mainbox box-center">
+    <div>
+        <a asp-action="index" asp-controller="agenda">
+            <img src="~/images/icons/calendar.png" alt="" />
+            <h5>Agenda</h5>
+            <p>Gerenciamento das tarefas agendadas.</p>
+        </a>
     </div>
+    <div>
+        <a asp-action="index" asp-controller="relatorios">
+            <img src="~/images/icons/char_lines.png" alt="" />
+            <h5>Relatórios</h5>
+            <p>Acompanhe as estatísticas de produtividade do seu time.</p>
+        </a>
+    </div>
+    <div>
+        <a asp-action="index" asp-controller="tarefas">
+            <img src="~/images/icons/book_anotation.png" alt="" />
+            <h5>Tarefas</h5>
+            <p>As tarefas que você deseja controlar</p>
+        </a>
+    </div>
+    <div>
+        <a asp-action="index" asp-controller="usuarios">
+            <img src="~/images/icons/user%20(3).png" alt="" />
+            <h5>Usuários</h5>
+            <p>Lista de usuários.</p>
+        </a>
+    </div>
+</div>
 
 @section Styles {
     <link href="~/css/mainlinks.css" rel="stylesheet" />
