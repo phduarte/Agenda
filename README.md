@@ -20,8 +20,7 @@ Sistema de gestão de compromissos.
 ### Tools
 
 - Nuget
-- Bower
-- Gulp
+- Libman
 
 ### Boas práticas
 
