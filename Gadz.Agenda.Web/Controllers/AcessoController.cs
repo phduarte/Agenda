@@ -4,6 +4,7 @@ using Gadz.Agenda.Web.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Linq;
 
 namespace Gadz.Agenda.Web.Controllers
 {
@@ -32,18 +33,24 @@ namespace Gadz.Agenda.Web.Controllers
         [HttpPost]
         public IActionResult Login(Credencial credencial)
         {
-            var usuario = _userServices.BuscarUsuario(credencial.Login, credencial.Senha);
-
-            if (usuario != null)
+            if (ModelState.IsValid)
             {
-                new DefaultHttpContext().Response.Cookies.Append("userId", usuario.Id.ToString(), new CookieOptions() { Expires = DateTimeOffset.Now.AddDays(1) });
-
-                return RedirectToAction("Index", "Home");
+                using (var db = new AgendaContext())
+                {
+                    var usuario = db.Usuarios.FirstOrDefault(x => x.Login.Equals(credencial.Login));
+                    if (usuario != null)
+                    {
+                        new DefaultHttpContext().Response.Cookies.Append("userId", usuario.Id.ToString(), new CookieOptions() { Expires = DateTimeOffset.Now.AddDays(1) });
+                        return RedirectToAction("index", "home");
+                    }
+                    else
+                        ModelState.AddModelError("", "User not found");
+                }
             }
 
             return View(credencial);
         }
-       
+
         public IActionResult Logout()
         {
             return RedirectToAction("Index", "Home");

@@ -1,6 +1,9 @@
-﻿namespace Gadz.Agenda.Web.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Gadz.Agenda.Web.Models
 {
-    public class AssistenteModel : Entidade
+    [Table("funcionarios")]
+    public class AssistenteModel : Usuario
     {
         public string Nome { get; set; }
 
