@@ -30,7 +30,7 @@
 <div id="box-formulario" class="box-center">
     <header id="top">
         <h5>Tarefa</h5>
-        <a asp-action="pesquisar" class="fechar"></a>
+        <a asp-action="index" class="fechar"></a>
     </header>
     <div id="center">
         <form id="form1">
@@ -58,7 +58,7 @@
                         <label asp-for="Grupo"></label>
                     </td>
                     <td class="style1">
-                        <select asp-for="Grupo" asp-items="Model.Grupos"></select>
+                        <select asp-for="Grupo"></select>
                         <span asp-validation-for="Grupo"></span>
                     </td>
                 </tr>
