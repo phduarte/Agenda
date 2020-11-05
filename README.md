@@ -7,9 +7,7 @@ Sistema de gestão de compromissos.
 
 ### Arquitetura
 
-- Domain-Driven Design
 - MVC
-- MVVM
 
 ### Framework
 
@@ -24,6 +22,7 @@ Sistema de gestão de compromissos.
 
 ### Boas práticas
 
+- Domain-Driven Design
 - SOLID
 - Injeção de Dependência
 - Design Patterns
