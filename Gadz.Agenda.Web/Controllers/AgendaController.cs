@@ -1,5 +1,5 @@
-﻿using Gadz.Agenda.Web.Filters;
-using Gadz.Agenda.Web.Models;
+﻿using Gadz.Agenda.Web.Domain;
+using Gadz.Agenda.Web.Filters;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Gadz.Agenda.Controllers
@@ -20,7 +20,7 @@ namespace Gadz.Agenda.Controllers
         }
 
         [HttpPost]
-        public IActionResult Cadastrar(AgendamentoModel model)
+        public IActionResult Cadastrar(Agendamento model)
         {
             if (ModelState.IsValid)
             {

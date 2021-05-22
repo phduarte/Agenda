@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Gadz.Agenda.Web.Models
+namespace Gadz.Agenda.Web.Domain
 {
     public enum StatusTratamento
     {

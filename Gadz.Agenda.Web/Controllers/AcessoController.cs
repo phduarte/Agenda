@@ -1,4 +1,5 @@
 ﻿using Gadz.Agenda.DomainModel;
+using Gadz.Agenda.Web.Data;
 using Gadz.Agenda.Web.Filters;
 using Gadz.Agenda.Web.Models;
 using Microsoft.AspNetCore.Http;
@@ -10,10 +11,12 @@ namespace Gadz.Agenda.Web.Controllers
 {
     public class AcessoController : Controller
     {
+        private readonly AgendaDbContext _dbContext;
         private readonly IUsuarioServices _userServices;
 
-        public AcessoController(IUsuarioServices userServices)
+        public AcessoController(AgendaDbContext dbContext, IUsuarioServices userServices)
         {
+            _dbContext = dbContext;
             _userServices = userServices;
         }
 
@@ -35,17 +38,15 @@ namespace Gadz.Agenda.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                using (var db = new AgendaContext())
+                var usuario = _dbContext.Usuarios.FirstOrDefault(x => x.Login.Equals(credencial.Login));
+                
+                if (usuario != null)
                 {
-                    var usuario = db.Usuarios.FirstOrDefault(x => x.Login.Equals(credencial.Login));
-                    if (usuario != null)
-                    {
-                        new DefaultHttpContext().Response.Cookies.Append("userId", usuario.Id.ToString(), new CookieOptions() { Expires = DateTimeOffset.Now.AddDays(1) });
-                        return RedirectToAction("index", "home");
-                    }
-                    else
-                        ModelState.AddModelError("", "User not found");
+                    new DefaultHttpContext().Response.Cookies.Append("userId", usuario.Id.ToString(), new CookieOptions() { Expires = DateTimeOffset.Now.AddDays(1) });
+                    return RedirectToAction("index", "home");
                 }
+                else
+                    ModelState.AddModelError("", "User not found");
             }
 
             return View(credencial);

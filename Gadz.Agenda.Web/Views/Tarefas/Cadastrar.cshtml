@@ -1,4 +1,4 @@
-﻿@model TarefaModel
+﻿@model Tarefa
 @section Styles{
     <link href="~/css/forms.css" rel="stylesheet" />
     <style type="text/css">
@@ -33,7 +33,7 @@
         <h5>Tarefa</h5>
         <a asp-action="index" class="fechar"></a>
     </header>
-    <form method="post" enctype="application/x-www-form-urlencoded">
+    <form role="form" method="post" enctype="application/x-www-form-urlencoded">
         <table>
             <tr>
                 <td class="style2">
@@ -41,7 +41,7 @@
                 </td>
                 <td class="style1">
                     <input asp-for="Nome" />
-                    <span asp-validation-for="Nome"></span>
+                    <span class="text-danger" asp-validation-for="Nome"></span>
                 </td>
             </tr>
             <tr>
@@ -50,7 +50,7 @@
                 </td>
                 <td class="style1">
                     <input asp-for="DataSolicitacao" />
-                    <span asp-validation-for="DataSolicitacao"></span>
+                    <span class="text-danger" asp-validation-for="DataSolicitacao"></span>
                 </td>
             </tr>
             <tr>
@@ -59,7 +59,7 @@
                 </td>
                 <td class="style1">
                     <select asp-for="Grupo" asp-items="@ViewBag.Grupos"></select>
-                    <span asp-validation-for="Grupo"></span>
+                    <span class="text-danger" asp-validation-for="Grupo"></span>
                 </td>
             </tr>
             <tr>
@@ -68,7 +68,19 @@
                 </td>
                 <td class="style1">
                     <textarea asp-for="Observacao"></textarea>
-                    <span asp-validation-for="Observacao"></span>
+                    <span class="text-danger" asp-validation-for="Observacao"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    <label asp-for="Status"></label>
+                </td>
+                <td class="style1">
+                    <select asp-for="Status">
+                        <option value="Ativo">Ativo</option>
+                        <option value="Inativo">Inativo</option>
+                    </select>
+                    <span class="text-danger" asp-validation-for="Status"></span>
                 </td>
             </tr>
             <tr>
@@ -82,6 +94,6 @@
         </table>
     </form>
     <footer>
-        <div asp-validation-summary="All"></div>
+        <div class="text-danger" asp-validation-summary="All"></div>
     </footer>
 </div>

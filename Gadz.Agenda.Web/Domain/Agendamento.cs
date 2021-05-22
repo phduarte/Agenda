@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Gadz.Agenda.Web.Models
+namespace Gadz.Agenda.Web.Domain
 {
     public class Agendamento : Entidade
     {

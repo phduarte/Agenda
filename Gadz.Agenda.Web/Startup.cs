@@ -1,6 +1,6 @@
 ﻿using Gadz.Agenda.Access;
 using Gadz.Agenda.DomainModel;
-using Gadz.Agenda.Web.Models;
+using Gadz.Agenda.Web.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;

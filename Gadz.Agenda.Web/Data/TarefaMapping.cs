@@ -1,7 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Gadz.Agenda.Web.Domain;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Gadz.Agenda.Web.Models
+namespace Gadz.Agenda.Web.Data
 {
     internal class TarefaMapping : IEntityTypeConfiguration<Tarefa>
     {

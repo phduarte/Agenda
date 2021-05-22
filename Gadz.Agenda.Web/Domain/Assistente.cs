@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Gadz.Agenda.Web.Models
+namespace Gadz.Agenda.Web.Domain
 {
     [Table("funcionarios")]
     public class Assistente : Usuario

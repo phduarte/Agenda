@@ -1,4 +1,4 @@
-﻿namespace Gadz.Agenda.Web.Models
+﻿namespace Gadz.Agenda.Web.Domain
 {
     public class Usuario : Entidade
     {
