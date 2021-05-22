@@ -26,12 +26,12 @@
     @RenderSection("Styles", false)
 </head>
 <body>
-    @Html.Partial("_Header")
-    @Html.Partial("_Statusbar")
+    <partial name="_Header" />
+    <partial name="_Statusbar" />
     <main id="content">
         @RenderBody()
     </main>
-    @Html.Partial("_Footer")
+    <partial name="_Footer" />
     <script type="text/javascript" src="~/js/script.js"></script>
     <script type="text/javascript" src="~/lib/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="~/lib/jquery-maskedinput/jquery.maskedinput.min.js"></script>
