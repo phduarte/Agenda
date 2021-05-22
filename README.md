@@ -11,7 +11,7 @@ Sistema de gestão de compromissos.
 
 ### Framework
 
-- AspNet Core 2.1
+- AspNet Core 5
 - Entity Framework
 - Bootstrap
 
