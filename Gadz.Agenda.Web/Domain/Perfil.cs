@@ -7,7 +7,7 @@ namespace Gadz.Agenda.Web.Domain
         public string Nome { get; set; }
         public string Login { get; set; }
         public string Email { get; set; }
-        public List<Grupo> Grupos { get; set; }
+        public List<Categoria> Categorias { get; set; }
         public List<Cliente> Clientes { get; set; }
     }
 }

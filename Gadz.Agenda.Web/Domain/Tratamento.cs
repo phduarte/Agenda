@@ -8,7 +8,7 @@ namespace Gadz.Agenda.Web.Domain
         [Display(Name = "Data do Envio")]
         public string DataEnvio { get; set; }
         public Diagnostico Diagnostico { get; set; }
-        public StatusTratamento Status { get; set; }
+        public StatusTratamento Status { get; set; } = StatusTratamento.Pendente;
         [Display(Name = "Observação")]
         public string Observacao { get; set; }
     }

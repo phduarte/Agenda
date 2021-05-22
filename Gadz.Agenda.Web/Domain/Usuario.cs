@@ -1,8 +1,7 @@
 ﻿namespace Gadz.Agenda.Web.Domain
 {
-    public class Usuario : Entidade
+    public class Usuario : Pessoa
     {
-        public string Nome { get; private set; }
         public string Login { get; set; }
         public string Senha { get; set; }
 

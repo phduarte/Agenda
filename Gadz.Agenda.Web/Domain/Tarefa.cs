@@ -11,9 +11,8 @@ namespace Gadz.Agenda.Web.Domain
         public DateTime DataSolicitacao { get; set; }
         [Display(Name = "Observação")]
         public string Observacao { get; set; }
-        public string Grupo { get; set; }
-        public string Responsavel { get; set; }
-        public int ResponsavelId { get; set; }
+        public Categoria Categoria { get; set; }
+        public Assistente Assistente { get; set; }
         public string Status { get; set; }
 
         public override string ToString()
