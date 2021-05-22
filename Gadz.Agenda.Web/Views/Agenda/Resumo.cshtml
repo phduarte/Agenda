@@ -1,4 +1,4 @@
-﻿@model AgendamentoDetalheModel
+﻿@model AgendamentoViewModel
 <form>
     <div id="box-agenda">
         <fieldset>
@@ -7,14 +7,14 @@
                 <tr>
                     <td colspan="3">
                         <h3>
-                            <asp:Literal ID="IdTarefa"></asp:Literal> - <asp:Literal ID="Tarefa"></asp:Literal>
+                            <span>@Model.TarefaId - @Model.Tarefa</span>
                         </h3>
                     </td>
                 </tr>
                 <tr>
                     <td><label>Cliente</label></td>
                     <td>
-                        <input asp-for="Cliente.Nome" readonly />
+                        <input asp-for="Cliente" readonly />
                     </td>
                     <td></td>
                 </tr>
@@ -41,40 +41,40 @@
                 </tr>
                 <tr>
                     <td><label>Duração</label></td>
-                    <td><asp:Literal ID="Duracao"></asp:Literal></td>
+                    <td><span asp-for="Duracao"></span></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td><label>Data da Solicitação</label></td>
-                    <td><asp:Literal ID="DataSolicitacao"></asp:Literal></td>
+                    <td><span asp-for="DataSolicitacao"></span></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td><label>Motivo da tarefa</label></td>
-                    <td colspan="2"><asp:Literal ID="MotivoTarefa"></asp:Literal></td>
+                    <td colspan="2"><span asp-for="MotivoTarefa"></span></td>
                 </tr>
                 <tr>
                     <td><label>Motivo deste agendamento</label></td>
-                    <td colspan="2"><asp:Literal ID="MotivoAgendamento"></asp:Literal></td>
+                    <td colspan="2"><span asp-for="MotivoAgendamento"></span></td>
                 </tr>
             </table>
         </fieldset>
         <fieldset>
             <legend>Últimos Envios</legend>
-            <asp:BulletedList ID="UltimosEnvios">
-            </asp:BulletedList>
+            <ul ID="UltimosEnvios">
+            </ul>
         </fieldset>
 
         <fieldset>
             <legend>Próximos Envios</legend>
-            <asp:BulletedList ID="ProximosEnvios">
-            </asp:BulletedList>
+            <ul ID="ProximosEnvios">
+            </ul>
         </fieldset>
 
         <fieldset>
             <legend>Histórico de Tratamento</legend>
-            <asp:BulletedList ID="HistoricoTratamentos">
-            </asp:BulletedList>
+            <ul ID="HistoricoTratamentos">
+            </ul>
         </fieldset>
 
     </div>
