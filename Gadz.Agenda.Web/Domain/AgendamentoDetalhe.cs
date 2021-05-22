@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Gadz.Agenda.Web.Models
 {
-    public class AgendamentoDetalheModel : AgendamentoModel
+    public class AgendamentoDetalhe : Agendamento
     {
         public string Categoria { get; set; }
     }

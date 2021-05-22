@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Gadz.Agenda.Web.Models
 {
-    public class TarefaModel : Entidade
+    public class Tarefa : Entidade
     {
         [MaxLength(50)]
         public string Nome { get; set; }

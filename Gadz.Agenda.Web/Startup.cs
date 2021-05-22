@@ -24,7 +24,7 @@ namespace Gadz.Agenda.Web
             services.AddControllersWithViews();
             services.AddScoped<IUsuarioServices, AccessServices>();
             services.AddRouting(x => x.LowercaseUrls = true);
-            services.AddDbContext<AgendaContext>(options =>
+            services.AddDbContext<AgendaDbContext>(options =>
             {
                 options.UseSqlite(Configuration.GetConnectionString("SqlLite"));
             });

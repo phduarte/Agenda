@@ -3,7 +3,7 @@
 namespace Gadz.Agenda.Web.Models
 {
     [Table("grupos")]
-    public class GrupoModel : Entidade
+    public class Grupo : Entidade
     {
         public string Nome { get; set; }
 

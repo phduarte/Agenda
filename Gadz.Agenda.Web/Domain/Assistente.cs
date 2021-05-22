@@ -3,7 +3,7 @@
 namespace Gadz.Agenda.Web.Models
 {
     [Table("funcionarios")]
-    public class AssistenteModel : Usuario
+    public class Assistente : Usuario
     {
         public string Nome { get; set; }
 

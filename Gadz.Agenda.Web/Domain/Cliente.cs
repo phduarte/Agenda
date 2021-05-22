@@ -1,6 +1,6 @@
 ﻿namespace Gadz.Agenda.Web.Models
 {
-    public class ClienteModel : Entidade
+    public class Cliente : Entidade
     {
         public string Nome { get; set; }
 

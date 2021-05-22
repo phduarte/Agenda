@@ -2,7 +2,7 @@
 
 namespace Gadz.Agenda.Web.Models
 {
-    public class TratamentoModel : Entidade
+    public class Tratamento : Entidade
     {
         public string Prazo { get; set; }
         [Display(Name = "Data do Envio")]

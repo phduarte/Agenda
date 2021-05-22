@@ -3,12 +3,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Gadz.Agenda.Web.Models
 {
-    public class AgendamentoModel : Entidade
+    public class Agendamento : Entidade
     {
-        public TarefaModel Tarefa { get; set; }
-        public ClienteModel Cliente { get; set; }
+        public Tarefa Tarefa { get; set; }
+        public Cliente Cliente { get; set; }
         [Display(Name = "Responsável")]
-        public AssistenteModel Responsavel { get; set; }
+        public Assistente Responsavel { get; set; }
         [Display(Name = "Data de início"), DataType(DataType.Date)]
         public DateTime DataInicio { get; set; }
         [Display(Name = "Data de término")]

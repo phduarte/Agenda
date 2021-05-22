@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Gadz.Agenda.Web.Models
 {
-    internal class TarefaMapping : IEntityTypeConfiguration<TarefaModel>
+    internal class TarefaMapping : IEntityTypeConfiguration<Tarefa>
     {
-        public void Configure(EntityTypeBuilder<TarefaModel> builder)
+        public void Configure(EntityTypeBuilder<Tarefa> builder)
         {
             builder.ToTable("tarefas");
             builder.HasKey(k => k.Id).HasName("pk_tarefas");
