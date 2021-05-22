@@ -12,6 +12,9 @@ namespace Gadz.Agenda.Web.Models
         [Display(Name = "Observação")]
         public string Observacao { get; set; }
         public string Grupo { get; set; }
+        public string Responsavel { get; set; }
+        public int ResponsavelId { get; set; }
+        public string Status { get; set; }
 
         public override string ToString()
         {

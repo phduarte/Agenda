@@ -1,7 +1,9 @@
 ﻿using Gadz.Agenda.Access;
 using Gadz.Agenda.DomainModel;
+using Gadz.Agenda.Web.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -22,6 +24,10 @@ namespace Gadz.Agenda.Web
             services.AddControllersWithViews();
             services.AddScoped<IUsuarioServices, AccessServices>();
             services.AddRouting(x => x.LowercaseUrls = true);
+            services.AddDbContext<AgendaContext>(options =>
+            {
+                options.UseSqlite(Configuration.GetConnectionString("SqlLite"));
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
