@@ -2,7 +2,6 @@
 
 namespace Gadz.Agenda.Web.Domain
 {
-    [Table("grupos")]
     public class Grupo : Entidade
     {
         public string Nome { get; set; }
