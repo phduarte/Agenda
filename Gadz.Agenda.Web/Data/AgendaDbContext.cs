@@ -2,7 +2,7 @@
 
 namespace Gadz.Agenda.Web.Models
 {
-    public class AgendaContext : DbContext
+    public class AgendaDbContext : DbContext
     {
         static bool updated = false;
 
@@ -22,7 +22,7 @@ namespace Gadz.Agenda.Web.Models
         //    }
         //}
 
-        public AgendaContext(DbContextOptions<AgendaContext> options)
+        public AgendaDbContext(DbContextOptions<AgendaDbContext> options)
         {
             if (!updated)
             {
