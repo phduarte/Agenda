@@ -261,3 +261,4 @@ __pycache__/
 *.pyc
 
 */wwwroot/lib/*
+/Gadz.Agenda.Web/agenda.db
