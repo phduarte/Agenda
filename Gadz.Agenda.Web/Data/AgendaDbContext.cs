@@ -11,7 +11,7 @@ namespace Gadz.Agenda.Web.Data
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Tarefa> Tarefas { get; set; }
         public DbSet<Agendamento> Agendamentos { get; set; }
-        public DbSet<Assistente> Assistentes { get; set; }
+        public DbSet<Funcionario> Funcionarios { get; set; }
         public DbSet<Diagnostico> Diagnosticos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Pessoa> Pessoas { get; set; }
@@ -21,6 +21,7 @@ namespace Gadz.Agenda.Web.Data
         {
             if (!updated)
             {
+                Database.EnsureDeleted();
                 Database.EnsureCreated();
                 //Database.Migrate();
                 updated = true;
@@ -33,6 +34,14 @@ namespace Gadz.Agenda.Web.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new TarefaMapping());
+            modelBuilder.ApplyConfiguration(new AgendamentoMapping());
+            modelBuilder.ApplyConfiguration(new TratamentoMapping());
+            modelBuilder.ApplyConfiguration(new DiagnosticoMapping());
+            modelBuilder.ApplyConfiguration(new PessoaMapping());
+            modelBuilder.ApplyConfiguration(new ClienteMapping());
+            modelBuilder.ApplyConfiguration(new FuncionarioMapping());
+            modelBuilder.ApplyConfiguration(new UsuarioMapping());
+            modelBuilder.ApplyConfiguration(new CategoriaMapping());
         }
     }
 }

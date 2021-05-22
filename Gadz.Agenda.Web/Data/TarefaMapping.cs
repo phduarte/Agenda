@@ -17,9 +17,15 @@ namespace Gadz.Agenda.Web.Data
             builder.Property(p => p.Observacao).HasColumnName("observacao").HasMaxLength(120).IsRequired();
             builder.Property(p => p.Status).HasColumnName("status").HasMaxLength(20).IsRequired();
 
-            //builder.HasOne(p => p.Responsavel)
-            //    .WithMany()
-            //    .HasForeignKey("responsavel_id");
+            builder.HasOne(p => p.Responsavel)
+                .WithMany()
+                .HasForeignKey("responsavel_id")
+                .HasConstraintName("fk_tarefas_responsaveis");
+
+            builder.HasOne(p => p.Categoria)
+                .WithMany()
+                .HasForeignKey("categoria_id")
+                .HasConstraintName("fk_tarefas_categorias");
         }
     }
 }

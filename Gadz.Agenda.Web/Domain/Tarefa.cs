@@ -12,7 +12,7 @@ namespace Gadz.Agenda.Web.Domain
         [Display(Name = "Observação")]
         public string Observacao { get; set; }
         public Categoria Categoria { get; set; }
-        public Assistente Assistente { get; set; }
+        public Funcionario Responsavel { get; set; }
         public string Status { get; set; }
 
         public override string ToString()
