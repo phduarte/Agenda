@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
-namespace Gadz.Agenda.Web.Domain
+﻿namespace Gadz.Agenda.Web.Domain
 {
     public class Categoria : Entidade
     {

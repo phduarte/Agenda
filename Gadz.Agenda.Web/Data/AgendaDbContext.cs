@@ -11,17 +11,11 @@ namespace Gadz.Agenda.Web.Data
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Tarefa> Tarefas { get; set; }
         public DbSet<Agendamento> Agendamentos { get; set; }
-        public DbSet<Assistente> Funcionarios { get; set; }
+        public DbSet<Assistente> Assistentes { get; set; }
         public DbSet<Diagnostico> Diagnosticos { get; set; }
-
-        //public AgendaContext()
-        //{
-        //    if (!updated)
-        //    {
-        //        Database.Migrate();
-        //        updated = true;
-        //    }
-        //}
+        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Pessoa> Pessoas { get; set; }
+        public DbSet<Tratamento> Tratamentos { get; set; }
 
         public AgendaDbContext(DbContextOptions<AgendaDbContext> options)
         {

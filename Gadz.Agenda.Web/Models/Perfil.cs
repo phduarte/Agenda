@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using Gadz.Agenda.Web.Domain;
+using System.Collections.Generic;
 
-namespace Gadz.Agenda.Web.Domain
+namespace Gadz.Agenda.Web.Models
 {
-    public class Perfil : Entidade
+    public class Perfil
     {
+        public string UsuarioId { get; set; }
         public string Nome { get; set; }
         public string Login { get; set; }
         public string Email { get; set; }

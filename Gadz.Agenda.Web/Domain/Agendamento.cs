@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Gadz.Agenda.Web.Domain
@@ -21,5 +22,6 @@ namespace Gadz.Agenda.Web.Domain
         [Display(Name = "Substituição")]
         public string Substituicao { get; set; }
         public string Motivo { get; set; }
+        public List<Tratamento> Tratamentos { get; set; }
     }
 }
