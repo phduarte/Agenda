@@ -58,7 +58,7 @@
                     <label asp-for="Grupo"></label>
                 </td>
                 <td class="style1">
-                    <select asp-for="Grupo"></select>
+                    <select asp-for="Grupo" asp-items="@ViewBag.Grupos"></select>
                     <span asp-validation-for="Grupo"></span>
                 </td>
             </tr>

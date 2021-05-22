@@ -16,5 +16,11 @@ namespace Gadz.Agenda.Web.Controllers
         {
             return View();
         }
+
+        [Breadcrumb("Configurações"), Title("Admin")]
+        public IActionResult Settings()
+        {
+            return View();
+        }
     }
 }
