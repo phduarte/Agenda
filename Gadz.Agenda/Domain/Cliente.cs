@@ -1,4 +1,4 @@
-﻿namespace Gadz.Agenda.Web.Domain
+﻿namespace Gadz.Agenda.Domain
 {
     public class Cliente : Pessoa
     {

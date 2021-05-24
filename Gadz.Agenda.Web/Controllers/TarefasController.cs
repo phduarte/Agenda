@@ -1,5 +1,5 @@
 ﻿using Gadz.Agenda.Data;
-using Gadz.Agenda.Web.Domain;
+using Gadz.Agenda.Domain;
 using Gadz.Agenda.Web.Filters;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;

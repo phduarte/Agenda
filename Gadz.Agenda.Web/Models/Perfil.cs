@@ -1,4 +1,4 @@
-﻿using Gadz.Agenda.Web.Domain;
+﻿using Gadz.Agenda.Domain;
 using System.Collections.Generic;
 
 namespace Gadz.Agenda.Web.Models

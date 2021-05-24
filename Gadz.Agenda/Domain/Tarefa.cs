@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Gadz.Agenda.Web.Domain
+namespace Gadz.Agenda.Domain
 {
     public class Tarefa : Entidade
     {

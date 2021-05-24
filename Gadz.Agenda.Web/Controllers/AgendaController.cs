@@ -1,4 +1,4 @@
-﻿using Gadz.Agenda.Web.Domain;
+﻿using Gadz.Agenda.Domain;
 using Gadz.Agenda.Web.Filters;
 using Microsoft.AspNetCore.Mvc;
 

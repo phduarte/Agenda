@@ -1,4 +1,4 @@
-﻿using Gadz.Agenda.Web.Domain;
+﻿using Gadz.Agenda.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace Gadz.Agenda.Data
