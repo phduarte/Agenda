@@ -1,7 +1,7 @@
 ﻿using Gadz.Agenda.Web.Domain;
 using Microsoft.EntityFrameworkCore;
 
-namespace Gadz.Agenda.Web.Data
+namespace Gadz.Agenda.Data
 {
     public class AgendaDbContext : DbContext
     {

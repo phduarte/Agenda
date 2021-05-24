@@ -1,4 +1,4 @@
-﻿using Gadz.Agenda.Web.Data;
+﻿using Gadz.Agenda.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;

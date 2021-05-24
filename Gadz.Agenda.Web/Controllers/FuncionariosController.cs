@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Gadz.Agenda.Web.Data;
+using Gadz.Agenda.Data;
 using Gadz.Agenda.Web.Domain;
 
 namespace Gadz.Agenda.Web.Controllers

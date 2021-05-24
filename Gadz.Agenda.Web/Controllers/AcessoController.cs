@@ -1,4 +1,4 @@
-﻿using Gadz.Agenda.Web.Data;
+﻿using Gadz.Agenda.Data;
 using Gadz.Agenda.Web.Filters;
 using Gadz.Agenda.Web.Models;
 using Microsoft.AspNetCore.Http;

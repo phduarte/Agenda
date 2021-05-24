@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Gadz.Agenda.Web.Data
+namespace Gadz.Agenda.Data
 {
     internal class UsuarioMapping : IEntityTypeConfiguration<Usuario>
     {
