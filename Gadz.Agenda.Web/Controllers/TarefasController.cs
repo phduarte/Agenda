@@ -4,6 +4,7 @@ using Gadz.Agenda.Web.Filters;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Gadz.Agenda.Controllers
 {
@@ -33,17 +34,9 @@ namespace Gadz.Agenda.Controllers
         [Title("Cadastro de tarefas")]
         public IActionResult Cadastrar(int id)
         {
-            //var model = new Gadz.Agenda.Web.Models.TarefaModel();
             var model = _dbContext.Tarefas.Find(id);
 
-            ViewBag.Grupos = new List<SelectListItem>
-            {
-                new SelectListItem("Trabalho", "1"),
-                new SelectListItem("Hobby", "2"),
-                new SelectListItem("Casa", "3"),
-                new SelectListItem("Viagem", "4"),
-                new SelectListItem("Saúde", "5"),
-            };
+            ViewBag.Categorias = _dbContext.Categorias.Select(c => new SelectListItem(c.Nome, c.Id.ToString()));
 
             return View(model);
         }
@@ -59,14 +52,7 @@ namespace Gadz.Agenda.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.Grupos = new List<SelectListItem>
-            {
-                new SelectListItem("Trabalho", "1"),
-                new SelectListItem("Hobby", "2"),
-                new SelectListItem("Casa", "3"),
-                new SelectListItem("Viagem", "4"),
-                new SelectListItem("Saúde", "5"),
-            };
+            ViewBag.Categorias = _dbContext.Categorias.Select(c => new SelectListItem(c.Nome, c.Id.ToString()));
 
             return View(model);
         }

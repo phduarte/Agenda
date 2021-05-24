@@ -12,12 +12,14 @@ namespace Gadz.Agenda.Web.Controllers
         }
 
         [Breadcrumb("Versões"), Title("Versões")]
+        [Route("versoes")]
         public IActionResult Versoes()
         {
             return View();
         }
 
         [Breadcrumb("Configurações"), Title("Admin")]
+        [Route("settings")]
         public IActionResult Settings()
         {
             return View();
