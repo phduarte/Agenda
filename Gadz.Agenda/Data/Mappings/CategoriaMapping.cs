@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Gadz.Agenda.Data
+namespace Gadz.Agenda.Data.Mappings
 {
     internal class CategoriaMapping : IEntityTypeConfiguration<Categoria>
     {
