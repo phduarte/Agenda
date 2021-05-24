@@ -1,5 +1,4 @@
-﻿using Gadz.Agenda.DomainModel;
-using Gadz.Agenda.Web.Data;
+﻿using Gadz.Agenda.Web.Data;
 using Gadz.Agenda.Web.Filters;
 using Gadz.Agenda.Web.Models;
 using Microsoft.AspNetCore.Http;
@@ -12,12 +11,10 @@ namespace Gadz.Agenda.Web.Controllers
     public class AcessoController : Controller
     {
         private readonly AgendaDbContext _dbContext;
-        private readonly IUsuarioServices _userServices;
 
-        public AcessoController(AgendaDbContext dbContext, IUsuarioServices userServices)
+        public AcessoController(AgendaDbContext dbContext)
         {
             _dbContext = dbContext;
-            _userServices = userServices;
         }
 
         [Breadcrumb("Acesso")]
@@ -67,21 +64,21 @@ namespace Gadz.Agenda.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var usuario = _userServices.BuscarUsuario(model.Login, model.Senha);
+                //var usuario = _userServices.BuscarUsuario(model.Login, model.Senha);
 
-                if (usuario != null)
-                {
-                    usuario.AlterarSenha(model.Senha);
-                    new DefaultHttpContext().Response.Cookies.Append("userId", usuario.Id.ToString(), new CookieOptions() { Expires = DateTimeOffset.Now.AddDays(1) });
+                //if (usuario != null)
+                //{
+                //    usuario.AlterarSenha(model.Senha);
+                //    new DefaultHttpContext().Response.Cookies.Append("userId", usuario.Id.ToString(), new CookieOptions() { Expires = DateTimeOffset.Now.AddDays(1) });
 
-                    _userServices.AtualizarUsuario(usuario);
+                //    _userServices.AtualizarUsuario(usuario);
 
-                    return RedirectToAction("Index", "Home");
-                }
-                else
-                {
-                    ModelState.AddModelError("", "User not found");
-                }
+                //    return RedirectToAction("Index", "Home");
+                //}
+                //else
+                //{
+                //    ModelState.AddModelError("", "User not found");
+                //}
             }
 
             return View(model);
