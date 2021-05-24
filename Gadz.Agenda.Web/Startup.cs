@@ -1,6 +1,4 @@
-﻿using Gadz.Agenda.Access;
-using Gadz.Agenda.DomainModel;
-using Gadz.Agenda.Web.Data;
+﻿using Gadz.Agenda.Web.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -22,7 +20,6 @@ namespace Gadz.Agenda.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddScoped<IUsuarioServices, AccessServices>();
             services.AddRouting(x => x.LowercaseUrls = true);
             services.AddDbContext<AgendaDbContext>(options =>
             {

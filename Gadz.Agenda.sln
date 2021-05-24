@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.960
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gadz.Agenda.Web", "Gadz.Agenda.Web\Gadz.Agenda.Web.csproj", "{A2AF3688-6D0D-4A5D-AF9C-463B202BBB23}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gadz.Agenda", "Gadz.Agenda\Gadz.Agenda.csproj", "{D7FCAC0C-F6DD-41DD-A3EB-7AC52E2E67CE}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gadz.Agenda.Access", "Gadz.Agenda.Access\Gadz.Agenda.Access.csproj", "{9FAA7A57-8000-4825-94D6-4E6D1B69A49D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Cross Cutting", "1. Cross Cutting", "{6BE5EDFE-ACF0-485F-A3F0-9A69AF51FEBB}"
 EndProject
@@ -31,10 +29,6 @@ Global
 		{D7FCAC0C-F6DD-41DD-A3EB-7AC52E2E67CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7FCAC0C-F6DD-41DD-A3EB-7AC52E2E67CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7FCAC0C-F6DD-41DD-A3EB-7AC52E2E67CE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9FAA7A57-8000-4825-94D6-4E6D1B69A49D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9FAA7A57-8000-4825-94D6-4E6D1B69A49D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9FAA7A57-8000-4825-94D6-4E6D1B69A49D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9FAA7A57-8000-4825-94D6-4E6D1B69A49D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F847FCFA-AB82-471F-A028-F8CAF9DD1702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F847FCFA-AB82-471F-A028-F8CAF9DD1702}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F847FCFA-AB82-471F-A028-F8CAF9DD1702}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -46,7 +40,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A2AF3688-6D0D-4A5D-AF9C-463B202BBB23} = {120E2B31-7734-4C72-9597-CAC85193F79F}
 		{D7FCAC0C-F6DD-41DD-A3EB-7AC52E2E67CE} = {605F5C05-FCDB-4F72-B6FD-F72011CF5F6C}
-		{9FAA7A57-8000-4825-94D6-4E6D1B69A49D} = {605F5C05-FCDB-4F72-B6FD-F72011CF5F6C}
 		{F847FCFA-AB82-471F-A028-F8CAF9DD1702} = {6BE5EDFE-ACF0-485F-A3F0-9A69AF51FEBB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
