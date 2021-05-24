@@ -33,15 +33,15 @@
         @RenderBody()
     </main>
     <partial name="_Footer" />
-    <script type="text/javascript" src="~/lib/bootstrap/js/bootstrap.min.js"/>
     <script type="text/javascript" src="~/lib/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="~/lib/jquery-maskedinput/jquery.maskedinput.min.js"></script>
-    <script type="text/javascript" src="~/lib/ShadownBox/Shadowbox.js"></script>
+    <script type="text/javascript" src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+    @*<script type="text/javascript" src="~/lib/ShadownBox/Shadowbox.js"></script>*@
     <script type="text/javascript" src="~/js/script.js"></script>
-    <script type="text/javascript">
+    @*<script type="text/javascript">
         $(window).ready(function () { ContentResize(); CenterInContent(); });
         $(window).resize(function () { ContentResize(); CenterInContent(); });
-    </script>
+    </script>*@
     @RenderSection("Scripts", false)
 </body>
 </html>

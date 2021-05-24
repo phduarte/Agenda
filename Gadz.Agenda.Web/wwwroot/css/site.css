@@ -4,13 +4,12 @@
 }
 
 main {
-    padding-bottom: 50px;
+    /*padding-bottom: 50px;*/
     clear: both;
     min-height: 350px;
     background-color: #1e1d1d;
     background-color: #fff;
     border-top: 1px solid #FFF;
-    overflow: auto;
 }
 
     main iframe {

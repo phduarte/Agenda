@@ -41,36 +41,53 @@ function numeros(b) {
         return true;
     }
 }
-//função de resize by PhDuarte...
-function ContentResize() {
 
-    var total = $(window).height();
-    var header = $("#header").outerHeight();
-    var status = $("#status").outerHeight();
-    var footer = 0;//("#footer").outerHeight();
+function contentResize() {
+
     var content = $("#content");
 
-    total = total - header - status - footer - 1;
+    if (content) {
 
-    if (total > 0)
-        content.css("height", total + "px");
+        var total = $(window).height();
+
+        var header = $("body > header").outerHeight();
+        var status = $("#status").outerHeight();
+        var footer = $("body > footer").outerHeight();
+
+        total = total - header - status - footer - 1;
+
+        if (total > 0) {
+            content.css("height", total + "px");
+            content.css("overflow-y", "hidden");
+        }
+    }
 }
-//
-function CenterInContent() {
 
-    var obj = ".box-center";
+function centerInContent() {
 
-    if (obj) {
+    var box = $(".box-center");
+    var content = $("#content");
+
+    if (box && content) {
 
         var x = 0;
 
-        x = $("#content").height();
-        x -= $(obj).innerHeight();
+        x = content.height();
+
+        x -= box.innerHeight();
         x = parseInt(x / 2);
 
-        //alert(x);
-
         if (x > 0)
-            $(obj).css("margin-top", x);
+            box.css("margin-top", x);
     }
+}
+
+window.onload = function () {
+    contentResize();
+    centerInContent();
+}
+
+window.onresize = function () {
+    contentResize();
+    centerInContent();
 }

@@ -36,7 +36,7 @@ namespace Gadz.Agenda.Controllers
         {
             var model = _dbContext.Tarefas.Find(id);
 
-            ViewBag.Categorias = _dbContext.Categorias.Select(c => new SelectListItem(c.Nome, c.Id.ToString()));
+            ViewBag.Categorias = _dbContext.Categorias.Select(c => new SelectListItem(c.Nome, c.Id.ToString())).ToList();
 
             return View(model);
         }
@@ -52,7 +52,7 @@ namespace Gadz.Agenda.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.Categorias = _dbContext.Categorias.Select(c => new SelectListItem(c.Nome, c.Id.ToString()));
+            ViewBag.Categorias = _dbContext.Categorias.Select(c => new SelectListItem(c.Nome, c.Id.ToString())).ToList();
 
             return View(model);
         }
